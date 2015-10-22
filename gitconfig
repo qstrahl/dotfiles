@@ -1,0 +1,7 @@
+[user]
+	email = qstrahl@gmail.com
+	name = Quinn Strahl
+[push]
+	default = simple
+[branch]
+	autosetuprebase = always
