@@ -1,4 +1,3 @@
-#include "solarized/xresources/Xresources.dark"
 URxvt.insecure: true
 URxvt.cursorBlink: true
 URxvt.font: xft:DejaVu Sans Mono:medium:size=9
@@ -8,10 +7,10 @@ URxvt.iso14755: false
 URxvt.pointerBlank: true
 URxvt.pointerBlankDelay: 1
 URxvt.scrollBar: false
-URxvt.perl-ext-common: default,font-size,matcher
-URxvt*urlLauncher: xdg-open
-URxvt*matcher.button: 1
-URxvt*matcher.pattern.1: \\bwww\\.[\\w-]+\\.[\\w./?&@#-]*[\\w/-]
+URxvt.perl-ext-common: default,font-size,matcher,osc-xterm-clipboard,osc-cursor-shape
+URxvt.urlLauncher: xdg-open
+URxvt.matcher.button: 1
+URxvt.matcher.pattern.1: \\bwww\\.[\\w-]+\\.[\\w./?&@#-]*[\\w/-]
 URxvt.keysym.C-equal: font-size:increase
 URxvt.keysym.C-minus: font-size:decrease
 URxvt.keysym.C-0: font-size:reset
@@ -19,10 +18,3 @@ URxvt.keysym.C-Up: \033[1;5A
 URxvt.keysym.C-Down: \033[1;5B
 URxvt.keysym.C-Left: \033[1;5D
 URxvt.keysym.C-Right: \033[1;5C
-Xft.antialias: 1
-Xft.autohint: 0
-Xft.dpi: 96
-Xft.hinting: 1
-Xft.hintstyle: hintslight
-Xft.lcdfilter: lcddefault
-Xft.rgba: none

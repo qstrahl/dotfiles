@@ -1,12 +1,9 @@
-[submodule "vim"]
-	path = vim
+[submodule "nvim"]
+	path = nvim/.config/nvim
 	url = git@github.com:qstrahl/.vim.git
-[submodule "solarized/xresources"]
-	path = solarized/xresources
-	url = https://github.com/solarized/xresources.git
 [submodule "tpm"]
-	path = tpm
+	path = tmux/.tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm.git
 [submodule "urxvt-font-size"]
-	path = urxvt-font-size
+	path = urxvt/.urxvt/ext/urxvt-font-size
 	url = https://github.com/majutsushi/urxvt-font-size.git
