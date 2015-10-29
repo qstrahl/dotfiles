@@ -1,6 +1,6 @@
 URxvt.insecure: true
 URxvt.cursorBlink: true
-URxvt.font: xft:DejaVu Sans Mono:medium:size=9
+URxvt.font: xft:DejaVu Sans Mono:size=9
 URxvt.geometry: 120x36
 URxvt.intensityStyles: false
 URxvt.iso14755: false 
