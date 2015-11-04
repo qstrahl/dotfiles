@@ -8,10 +8,7 @@ URxvt.iso14755: false
 URxvt.pointerBlank: true
 URxvt.pointerBlankDelay: 1
 URxvt.scrollBar: false
-URxvt.perl-ext-common: default,font-size,matcher,osc-xterm-clipboard,osc-cursor-shape
-URxvt.urlLauncher: xdg-open
-URxvt.matcher.button: 1
-URxvt.matcher.pattern.1: \\bwww\\.[\\w-]+\\.[\\w./?&@#-]*[\\w/-]
+URxvt.perl-ext-common: default,font-size,osc-xterm-clipboard,osc-cursor-shape
 URxvt.keysym.C-equal: font-size:increase
 URxvt.keysym.C-minus: font-size:decrease
 URxvt.keysym.C-0: font-size:reset
