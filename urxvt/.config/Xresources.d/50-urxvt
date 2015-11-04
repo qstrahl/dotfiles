@@ -9,9 +9,9 @@ URxvt.pointerBlank: true
 URxvt.pointerBlankDelay: 1
 URxvt.scrollBar: false
 URxvt.perl-ext-common: default,font-size,osc-xterm-clipboard,osc-cursor-shape
-URxvt.keysym.C-equal: font-size:increase
-URxvt.keysym.C-minus: font-size:decrease
-URxvt.keysym.C-0: font-size:reset
+URxvt.keysym.C-F12: font-size:increase
+URxvt.keysym.C-F11: font-size:decrease
+URxvt.keysym.C-F10: font-size:reset
 URxvt.keysym.C-Up: \033[1;5A
 URxvt.keysym.C-Down: \033[1;5B
 URxvt.keysym.C-Left: \033[1;5D
