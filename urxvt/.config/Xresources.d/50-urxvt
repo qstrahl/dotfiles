@@ -1,7 +1,7 @@
 /* vim: set ft=xdefaults :*/
 URxvt.insecure: true
 URxvt.cursorBlink: true
-URxvt.font: xft:DejaVu Sans Mono:size=10
+URxvt.font: xft:Ubuntu Mono:Size=10
 URxvt.geometry: 120x36
 URxvt.intensityStyles: false
 URxvt.iso14755: false 
