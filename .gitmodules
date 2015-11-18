@@ -1,9 +1,15 @@
 [submodule "nvim"]
 	path = nvim/.config/nvim
 	url = git@github.com:qstrahl/.vim.git
+	branch = master
+	update = rebase
 [submodule "tpm"]
 	path = tmux/.tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm.git
+	branch = master
+	update = rebase
 [submodule "urxvt-font-size"]
 	path = urxvt/.urxvt/ext/urxvt-font-size
 	url = https://github.com/majutsushi/urxvt-font-size.git
+	branch = master
+	update = rebase
