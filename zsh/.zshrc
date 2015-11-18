@@ -49,7 +49,7 @@ DISABLE_AUTO_TITLE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=( aws bower gem gitfast git-extras git-remote-branch history history-substring-search node npm pip )
+plugins=( bower gem gitfast history history-substring-search node npm pip )
 
 # User configuration
 
