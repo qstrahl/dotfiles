@@ -1,0 +1,2 @@
+# vim: set ft=sh :
+xrdb -merge "$HOME"/.config/Xresources.d/*
