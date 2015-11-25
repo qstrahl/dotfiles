@@ -24,4 +24,4 @@ export PATH="$HOME/.npm/bin:$PATH"
 unset MANPATH
 export MANPATH="$HOME/.npm/share/man:$(manpath)"
 
-export TERMINFO_DIRS="$HOME/dotfiles/terminfo:$TERMINFO_DIRS"
+export TERMINFO_DIRS="$HOME/.terminfo:$TERMINFO_DIRS"
