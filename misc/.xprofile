@@ -2,4 +2,3 @@
 for f in "$HOME"/.config/Xresources.d/*; do
   xrdb -merge "$f"
 done
-synclient TapButton3=2
