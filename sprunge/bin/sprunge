@@ -1,2 +1,2 @@
 # vim: set ft=sh :
-curl -s -F 'sprunge=<-' http://sprunge.us | tr -d '\n' | xsel -i
+curl -s -F 'sprunge=<-' http://sprunge.us | tr -d '\n' | xsel -ib
