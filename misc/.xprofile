@@ -1,2 +1,4 @@
 # vim: set ft=sh :
-xrdb -merge "$HOME"/.config/Xresources.d/*
+for f in "$HOME"/.config/Xresources.d/*; do
+  xrdb -merge "$f"
+done
