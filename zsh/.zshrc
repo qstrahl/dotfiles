@@ -87,5 +87,6 @@ alias optirun='optirun '
 alias primusrun='primusrun '
 alias activator='activator -mem 2048'
 alias record='asciinema rec'
+alias trash='gvfs-trash'
 
 setopt extendedglob
