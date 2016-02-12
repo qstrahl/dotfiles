@@ -23,6 +23,8 @@ export MANPATH="$HOME/.npm/share/man:$(manpath)"
 
 export TERMINFO_DIRS="$HOME/.terminfo:$TERMINFO_DIRS"
 
+export NODE_PATH="$NODE_PATH:$HOME/.npm/lib/node_modules"
+
 # Remove duplicate entries from environment vars in case of multiple login shells
 for i in PATH TERMINFO_DIRS; do
   export $i="$( eval echo "\$$i" | tr ':' '\n' | sort -u | paste -sd: )"
