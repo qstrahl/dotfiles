@@ -82,7 +82,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias sudo='sudo '
-alias xvfb-run='xvfb-run -a '
+alias xvfb-run='xvfb-run -a -s "-screen 0 1920x1080x24" '
 alias optirun='optirun '
 alias primusrun='primusrun '
 alias activator='activator -mem 2048'
