@@ -85,7 +85,7 @@ alias sudo='sudo '
 alias xvfb-run='xvfb-run -a -s "-screen 0 1920x1080x24" '
 alias optirun='optirun '
 alias primusrun='primusrun '
-alias activator='activator -mem 2048'
+alias activator='activator -Duser.timezone=GMT -mem 2048'
 alias record='asciinema rec'
 alias trash='gvfs-trash'
 
