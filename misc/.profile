@@ -1,7 +1,14 @@
 # vim: ft=sh
 
 # The one and only
-export EDITOR="vim"
+export EDITOR='vim'
+export VISUAL='vim'
+export PAGER='less'
+
+# Set the default Less options.
+# Mouse-wheel scrolling has been disabled by -X (disable screen clearing).
+# Remove -X and -F (exit if the content fits on one screen) to enable it.
+export LESS='-F -g -i -M -R -S -w -X -z-4'
 
 # Include per-user bins
 export PATH="$HOME/bin:$HOME/.local/bin:$PATH"
