@@ -13,3 +13,9 @@
 	url = https://github.com/majutsushi/urxvt-font-size.git
 	branch = master
 	update = rebase
+[submodule "zsh/.zprezto"]
+	path = zsh/.zprezto
+	url = https://github.com/sorin-ionescu/prezto.git
+[submodule "zprezto/.zprezto"]
+	path = zprezto/.zprezto
+	url = https://github.com/sorin-ionescu/prezto.git
