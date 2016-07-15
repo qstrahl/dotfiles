@@ -17,5 +17,10 @@ alias activator='activator -Duser.timezone=GMT -mem 2048'
 alias record='asciinema rec'
 alias trash='gvfs-trash'
 
+if (( $+commands[tmuxifier] )); then
+    eval "$(tmuxifier init -)"
+    alias mux='tmuxifier'
+fi
+
 # shell options
 setopt extendedglob
