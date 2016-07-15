@@ -36,3 +36,14 @@ export NODE_PATH="$NODE_PATH:$HOME/.npm/lib/node_modules"
 for i in PATH TERMINFO_DIRS; do
   export $i="$( eval echo "\$$i" | tr ':' '\n' | sort -u | paste -sd: )"
 done
+
+# aliases
+alias activator='activator -Duser.timezone=GMT -mem 2048'
+alias ls='ls --group-directories-first --color=auto'
+alias mux='tmuxifier'
+alias optirun='optirun '
+alias primusrun='primusrun '
+alias record='asciinema rec'
+alias sudo='sudo '
+alias trash='gvfs-trash'
+alias xvfb-run='xvfb-run -a -s "-screen 0 1920x1080x24" '
