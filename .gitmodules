@@ -16,3 +16,6 @@
 [submodule "zsh-history-substring-search"]
 	path = zsh/.config/zsh/zsh-history-substring-search
 	url = https://github.com/zsh-users/zsh-history-substring-search.git
+[submodule "tmuxifier"]
+	path = tmux/.tmuxifier
+	url = https://github.com/jimeh/tmuxifier.git
