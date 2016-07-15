@@ -13,3 +13,6 @@
 	url = https://github.com/majutsushi/urxvt-font-size.git
 	branch = master
 	update = rebase
+[submodule "zsh-history-substring-search"]
+	path = zsh/.config/zsh/zsh-history-substring-search
+	url = https://github.com/zsh-users/zsh-history-substring-search.git
