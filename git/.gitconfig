@@ -5,3 +5,5 @@
 	default = simple
 [branch]
 	autosetuprebase = always
+[github]
+	user = qstrahl
