@@ -17,6 +17,7 @@ export PS1="%B%F{green}
 ┏━ %F{blue}%~%F{green}
 ┗ %f%b"
 
+# tmuxifier init
 if (( $+commands[tmuxifier] )); then
     eval "$(tmuxifier init -)"
 fi
