@@ -47,13 +47,27 @@ bindkey -v "\e[6~"      down-line                       # pagedown
 bindkey -v "\e[32;2u"   magic-space                     # shift-space
 bindkey -v "\e[32;6u"   magic-space                     # ctrl-shift-space
 bindkey -v "^?"         backward-delete-char            # backspace
+bindkey -v "^W"         backward-kill-word
 bindkey -v "\e[127;5u"  backward-kill-word              # ctrl-backspace
 bindkey -v "\e[127;2u"  backward-kill-word              # shift-backspace
 bindkey -v "\e[127;6u"  backward-kill-word              # ctrl-shift-backspace
+bindkey -v "^U"         backward-kill-line
 bindkey -v "\e[13;5u"   vi-open-line-below              # ctrl-enter
 bindkey -v "\e[13;2u"   vi-open-line-below              # shift-enter
 bindkey -v "\e[13;6u"   vi-open-line-below              # ctrl-shift-enter
 bindkey -v "^O"         edit-command-line
+bindkey -v "\e[1;5A"    up-line                         # ctrl-up
+bindkey -v "\e[1;5B"    down-line                       # ctrl-down
+bindkey -v "\e[1;5C"    forward-word                    # ctrl-right
+bindkey -v "\e[1;5D"    backward-word                   # ctrl-left
+bindkey -v "\e[1;2A"    up-line                         # shift-up
+bindkey -v "\e[1;2B"    down-line                       # shift-down
+bindkey -v "\e[1;2C"    forward-word                    # shift-right
+bindkey -v "\e[1;2D"    backward-word                   # shift-left
+bindkey -v "\e[1;6A"    up-line                         # ctrl-shift-up
+bindkey -v "\e[1;6B"    down-line                       # ctrl-shift-down
+bindkey -v "\e[1;6C"    forward-word                    # ctrl-shift-right
+bindkey -v "\e[1;6D"    backward-word                   # ctrl-shift-left
 
 # cmd mode keys
 bindkey -a "\e[1~"      vi-beginning-of-line            # home
@@ -75,6 +89,18 @@ bindkey -a "~"          vi-backward-blank-word-end
 bindkey -a "U"          vi-swap-case
 bindkey -a "j"          down-line
 bindkey -a "k"          up-line
+bindkey -a "\e[1;5A"    up-line                         # ctrl-up
+bindkey -a "\e[1;5B"    down-line                       # ctrl-down
+bindkey -a "\e[1;5C"    forward-word                    # ctrl-right
+bindkey -a "\e[1;5D"    backward-word                   # ctrl-left
+bindkey -a "\e[1;2A"    up-line                         # shift-up
+bindkey -a "\e[1;2B"    down-line                       # shift-down
+bindkey -a "\e[1;2C"    forward-word                    # shift-right
+bindkey -a "\e[1;2D"    backward-word                   # shift-left
+bindkey -a "\e[1;6A"    up-line                         # ctrl-shift-up
+bindkey -a "\e[1;6B"    down-line                       # ctrl-shift-down
+bindkey -a "\e[1;6C"    forward-word                    # ctrl-shift-right
+bindkey -a "\e[1;6D"    backward-word                   # ctrl-shift-left
 
 # history substring search
 source "$ZDOTDIR/zsh-history-substring-search/zsh-history-substring-search.zsh"
