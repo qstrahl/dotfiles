@@ -1,0 +1,53 @@
+set editing-mode vi
+
+set keymap vi-insert
+"\e[106;5u":    next-history
+"\e[1;2A":      previous-history
+"\e[1;2B":      next-history
+"\e[1;2C":      forward-word
+"\e[1;2D":      backward-word
+"\e[1;5A":      previous-history
+"\e[1;5B":      next-history
+"\e[1;5C":      forward-word
+"\e[1;5D":      backward-word
+"\e[1;6A":      previous-history
+"\e[1;6B":      next-history
+"\e[1;6C":      forward-word
+"\e[1;6D":      backward-word
+"\e[A":         previous-history
+"\e[B":         next-history
+"^K":           previous-history
+"\e[32;2u":     " "
+"\e[32;6u":     " "
+
+set keymap vi-command
+"\`":           backward-word
+"\e[106;5u":    next-history
+"\e[127;2u":    backward-word
+"\e[127;5u":    backward-word
+"\e[127;6u":    backward-word
+"\e[1;2A":      previous-history
+"\e[1;2B":      next-history
+"\e[1;2C":      forward-word
+"\e[1;2D":      backward-word
+"\e[1;5A":      previous-history
+"\e[1;5B":      next-history
+"\e[1;5C":      forward-word
+"\e[1;5D":      backward-word
+"\e[1;6A":      previous-history
+"\e[1;6B":      next-history
+"\e[1;6C":      forward-word
+"\e[1;6D":      backward-word
+"\e[1~":        beginning-of-line
+"\e[32;2u":     " "
+"\e[32;6u":     " "
+"\e[4~":        end-of-line
+"\e[5~":        previous-history
+"\e[6~":        next-history
+"\e[A":         previous-history
+"\e[B":         next-history
+"^?":           backward-char
+"^K":           previous-history
+"j":            next-history
+"k":            previous-history
+"~":            backward-word
