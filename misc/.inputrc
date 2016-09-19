@@ -6,19 +6,27 @@ set keymap vi-insert
 "\e[1;2B":      next-history
 "\e[1;2C":      forward-word
 "\e[1;2D":      backward-word
+"\e[1;2F":      end-of-line
+"\e[1;2H":      beginning-of-line
 "\e[1;5A":      previous-history
 "\e[1;5B":      next-history
 "\e[1;5C":      forward-word
 "\e[1;5D":      backward-word
+"\e[1;5F":      end-of-line
+"\e[1;5H":      beginning-of-line
 "\e[1;6A":      previous-history
 "\e[1;6B":      next-history
 "\e[1;6C":      forward-word
 "\e[1;6D":      backward-word
+"\e[1;6F":      end-of-line
+"\e[1;6H":      beginning-of-line
+"\e[32;2u":     " "
+"\e[32;6u":     " "
+"\e[5;5~":      previous-history
+"\e[6;5~":      next-history
 "\e[A":         previous-history
 "\e[B":         next-history
 "^K":           previous-history
-"\e[32;2u":     " "
-"\e[32;6u":     " "
 
 set keymap vi-command
 "\`":           backward-word
@@ -30,19 +38,27 @@ set keymap vi-command
 "\e[1;2B":      next-history
 "\e[1;2C":      forward-word
 "\e[1;2D":      backward-word
+"\e[1;2F":      end-of-line
+"\e[1;2H":      beginning-of-line
 "\e[1;5A":      previous-history
 "\e[1;5B":      next-history
 "\e[1;5C":      forward-word
 "\e[1;5D":      backward-word
+"\e[1;5F":      end-of-line
+"\e[1;5H":      beginning-of-line
 "\e[1;6A":      previous-history
 "\e[1;6B":      next-history
 "\e[1;6C":      forward-word
 "\e[1;6D":      backward-word
+"\e[1;6F":      end-of-line
+"\e[1;6H":      beginning-of-line
 "\e[1~":        beginning-of-line
 "\e[32;2u":     " "
 "\e[32;6u":     " "
 "\e[4~":        end-of-line
+"\e[5;5~":      previous-history
 "\e[5~":        previous-history
+"\e[6;5~":      next-history
 "\e[6~":        next-history
 "\e[A":         previous-history
 "\e[B":         next-history
