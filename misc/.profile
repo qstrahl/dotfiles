@@ -41,6 +41,8 @@ if [[ -z "$NODE_PATH" ]] && command -v npm >/dev/null 2>&1; then
   export NODE_PATH="$(npm root -g)"
 fi
 
+export NODE_ENV="development"
+
 # Remove duplicate entries from environment vars in case of multiple login shells
 if command -v tr >/dev/null && command -v paste >/dev/null && command -v sort >/dev/null; then
   for i in PATH TERMINFO_DIRS; do
