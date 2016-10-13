@@ -15,3 +15,6 @@
 	prune = true
 [core]
 	excludesfile = ~/.gitignore
+[alias]
+	amend = commit --amend --no-edit
+	stat = status --short
