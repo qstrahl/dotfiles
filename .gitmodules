@@ -19,3 +19,6 @@
 [submodule "tmuxifier"]
 	path = tmux/.tmuxifier
 	url = https://github.com/jimeh/tmuxifier.git
+[submodule "zsh/.config/zsh/zsh-autopair"]
+	path = zsh/.config/zsh/zsh-autopair
+	url = git@github.com:hlissner/zsh-autopair.git
