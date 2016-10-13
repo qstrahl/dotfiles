@@ -6,6 +6,25 @@ zmodload zsh/zprof
 # shell options
 setopt extendedglob
 
+# vim-surround-like keys
+autoload -Uz surround
+zle -N delete-surround surround
+zle -N add-surround surround
+zle -N change-surround surround
+bindkey -a cs change-surround
+bindkey -a ds delete-surround
+bindkey -a ys add-surround
+bindkey -M visual S add-surround
+
+# vim-like quote text objects
+autoload -Uz select-quoted
+zle -N select-quoted
+for m in visual viopp; do
+  for c in {a,i}{\',\",\`}; do
+    bindkey -M $m $c select-quoted
+  done
+done
+
 # completion
 autoload -U compinit edit-command-line
 zle -N edit-command-line
@@ -121,6 +140,9 @@ bindkey -a "\e[1;6A"    up-line                         # ctrl-shift-up
 bindkey -a "\e[1;6B"    down-line                       # ctrl-shift-down
 bindkey -a "\e[1;6C"    forward-word                    # ctrl-shift-right
 bindkey -a "\e[1;6D"    backward-word                   # ctrl-shift-left
+
+# autopair
+source "$ZDOTDIR/zsh-autopair/autopair.zsh"
 
 # history substring search
 source "$ZDOTDIR/zsh-history-substring-search/zsh-history-substring-search.zsh"
