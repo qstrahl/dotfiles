@@ -52,6 +52,7 @@ fi
 
 # aliases
 alias activator='activator -Duser.timezone=GMT -mem 2048'
+alias fuck='sudo $(fc -ln -1)'
 alias ls='ls --group-directories-first --color=auto'
 alias mux='tmuxifier'
 alias optirun='optirun '
