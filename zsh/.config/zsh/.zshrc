@@ -157,3 +157,6 @@ bindkey -a "\e[A"       history-substring-search-up     # up
 bindkey -a "^K"         history-substring-search-up     # ctrl-k
 bindkey -a "\e[B"       history-substring-search-down   # down
 bindkey -a "\e[106;5u"  history-substring-search-down   # ctrl-j
+
+# syntax highlighting
+source "$ZDOTDIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
