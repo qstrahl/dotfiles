@@ -20,3 +20,6 @@
 	stat = status --short
 [format]
 	pretty = format:%C(auto)%h %s
+
+[include]
+	path = .gitconfig.local
