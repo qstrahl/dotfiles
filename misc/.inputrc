@@ -26,6 +26,8 @@ set keymap vi-insert
 "\e[6;5~":      next-history
 "\e[A":         previous-history
 "\e[B":         next-history
+"\e[F":         end-of-line
+"\e[H":         beginning-of-line
 "^K":           previous-history
 
 set keymap vi-command
@@ -62,6 +64,8 @@ set keymap vi-command
 "\e[6~":        next-history
 "\e[A":         previous-history
 "\e[B":         next-history
+"\e[F":         end-of-line
+"\e[H":         beginning-of-line
 "^?":           backward-char
 "^K":           previous-history
 "j":            next-history

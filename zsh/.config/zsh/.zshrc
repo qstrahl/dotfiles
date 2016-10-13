@@ -40,6 +40,8 @@ setopt share_history
 bindkey -v
 
 # insert mode keys
+bindkey -v "\e[H"       vi-beginning-of-line            # home
+bindkey -v "\e[F"       vi-end-of-line                  # end
 bindkey -v "\e[1~"      vi-beginning-of-line            # home
 bindkey -v "\e[4~"      vi-end-of-line                  # end
 bindkey -v "\e[5~"      up-line                         # pageup
@@ -78,6 +80,8 @@ bindkey -v "\e[1;6C"    forward-word                    # ctrl-shift-right
 bindkey -v "\e[1;6D"    backward-word                   # ctrl-shift-left
 
 # cmd mode keys
+bindkey -a "\e[H"       vi-beginning-of-line            # home
+bindkey -a "\e[F"       vi-end-of-line                  # end
 bindkey -a "\e[1~"      vi-beginning-of-line            # home
 bindkey -a "\e[4~"      vi-end-of-line                  # end
 bindkey -a "\e[5~"      up-line                         # pageup
