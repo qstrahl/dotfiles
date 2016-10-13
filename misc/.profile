@@ -55,13 +55,13 @@ alias activator='activator -Duser.timezone=GMT -mem 2048'
 alias fuck='sudo $(fc -ln -1)'
 alias ls='ls --group-directories-first --color=auto'
 alias mux='tmuxifier'
+alias nox='xvfb-run '
 alias optirun='optirun '
 alias primusrun='primusrun '
 alias record='asciinema rec'
 alias sudo='sudo '
 alias trash='gvfs-trash'
 alias xvfb-run='xvfb-run -a -s "-screen 0 1920x1080x24" '
-alias nox='xvfb-run '
 
 # unfortunately necessary to make some xdg stuff work
 export DE="gnome"
