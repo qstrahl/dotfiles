@@ -66,5 +66,3 @@ alias xvfb-run='xvfb-run -a -s "-screen 0 1920x1080x24" '
 # unfortunately necessary to make some xdg stuff work
 export DE="gnome"
 export GDK_SCALE=1
-
-[[ -z "$DISPLAY" && -o LOGIN ]] && exec startx
