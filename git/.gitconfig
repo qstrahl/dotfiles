@@ -18,3 +18,5 @@
 [alias]
 	amend = commit --amend --no-edit
 	stat = status --short
+[format]
+	pretty = format:%C(auto)%h %s
