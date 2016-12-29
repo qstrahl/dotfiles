@@ -5,6 +5,8 @@ export EDITOR="$(command -v nvim || command -v vim || command -v vi)"
 export VISUAL="$EDITOR"
 export PAGER="$(command -v less || command -v more)"
 
+export TERMINAL="pangoterm"
+
 # Set the default Less options.
 # Mouse-wheel scrolling has been disabled by -X (disable screen clearing).
 # Remove -X and -F (exit if the content fits on one screen) to enable it.
