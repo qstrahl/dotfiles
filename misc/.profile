@@ -12,6 +12,9 @@ export TERMINAL="pangoterm"
 # Remove -X and -F (exit if the content fits on one screen) to enable it.
 export LESS='-F -g -i -M -R -S -w -X -z-4'
 
+# FZF config
+export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
+
 # Include per-user bins
 export PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 

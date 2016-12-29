@@ -71,3 +71,5 @@ antigen apply
 
 # autosuggestions config
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=0'
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
