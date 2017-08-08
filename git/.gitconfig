@@ -19,8 +19,5 @@
 	fixup = commit --amend --no-edit
         please = push --force-with-lease
 	stat = status --short
-[format]
-	pretty = format:%C(auto)%h %s
-
 [include]
 	path = .gitconfig.local
