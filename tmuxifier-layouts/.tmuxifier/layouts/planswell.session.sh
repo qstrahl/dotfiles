@@ -1,8 +1,10 @@
 if initialize_session "planswell"; then
   load_window "htop"
+  load_window "irc"
   load_window "pw-server"
   load_window "pw-react"
-  load_window "irc"
+  load_window "kyc"
+  load_window "kyc-ui"
   new_window
 fi
 
