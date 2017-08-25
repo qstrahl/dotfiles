@@ -18,8 +18,8 @@
 	excludesfile = ~/.gitignore
 [alias]
 	fixup = commit --amend --no-edit
-        please = push --force-with-lease
+	please = push --force-with-lease
 	stat = status --short
 	fuckit = reset --hard FETCH_HEAD
 [include]
-	path = .gitconfig.local
+        path = .gitconfig.local
