@@ -21,5 +21,6 @@
 	please = push --force-with-lease
 	stat = status --short
 	fucked = reset --hard FETCH_HEAD
+	refs = !find "$(git rev-parse --git-dir)"/refs/*/ -type f | cut -d/ -f1,2,3 --complement
 [include]
         path = .gitconfig.local
