@@ -3,6 +3,7 @@ if initialize_session "planswell"; then
   load_window "irc"
   load_window "pw-server"
   load_window "pw-react"
+  load_window "portfolios"
   new_window
 fi
 
