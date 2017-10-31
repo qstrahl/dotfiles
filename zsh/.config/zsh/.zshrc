@@ -4,11 +4,9 @@
 # zmodload zsh/zprof
 
 # load builtin "plugins"
-autoload -U <<END
-  surround
-  select-quoted
-  edit-command-line
-END
+autoload -Uz edit-command-line
+autoload -Uz select-quoted
+autoload -Uz surround
 
 # load antigen plugins
 source "$ZDOTDIR/antigen/bin/antigen.zsh"
