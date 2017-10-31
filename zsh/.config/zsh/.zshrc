@@ -4,6 +4,7 @@
 # zmodload zsh/zprof
 
 # load builtin "plugins"
+autoload -Uz bracketed-paste-magic
 autoload -Uz edit-command-line
 autoload -Uz select-quoted
 autoload -Uz surround
@@ -19,6 +20,9 @@ antigen bundles <<END
   zsh-users/zsh-history-substring-search
   zsh-users/zsh-syntax-highlighting
 END
+
+# bracketed paste magic!
+zle -N bracketed-paste bracketed-paste-magic
 
 # vim-surround-like keys
 zle -N delete-surround surround
