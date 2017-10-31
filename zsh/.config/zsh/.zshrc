@@ -6,6 +6,7 @@
 # load builtin "plugins"
 autoload -Uz bracketed-paste-magic
 autoload -Uz edit-command-line
+autoload -Uz select-bracketed
 autoload -Uz select-quoted
 autoload -Uz surround
 
@@ -20,6 +21,14 @@ antigen bundles <<END
   zsh-users/zsh-history-substring-search
   zsh-users/zsh-syntax-highlighting
 END
+
+# pairs text objects
+zle -N select-bracketed
+for m in visual viopp; do
+  for c in {a,i}${(s..)^:-'()[]{}<>bB'}; do
+    bindkey -M $m $c select-bracketed
+  done
+done
 
 # bracketed paste magic!
 zle -N bracketed-paste bracketed-paste-magic
