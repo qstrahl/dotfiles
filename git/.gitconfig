@@ -22,5 +22,6 @@
 	stat = status --short
 	fucked = reset --hard FETCH_HEAD
 	refs = !(cd "$(git rev-parse --git-dir)/refs" && find -type f) | cut -d/ -f1,2 --complement
+	heads = !(cd "$(git rev-parse --git-dir)/refs/heads" && find -type f) | cut -d/ -f1 --complement
 [include]
         path = .gitconfig.local
