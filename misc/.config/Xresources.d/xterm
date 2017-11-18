@@ -5,7 +5,7 @@ XTerm*boldColors: false
 XTerm*cursorBlink: true
 XTerm*faceName: Noto
 XTerm*faceSize: 8
-XTerm*formatOtherKeys: 2
+XTerm*formatOtherKeys: 1
 XTerm*fullscreen: never
 XTerm*geometry: 120x50
 XTerm*metaSendsEscape: true
