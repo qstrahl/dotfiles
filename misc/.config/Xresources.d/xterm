@@ -1,4 +1,5 @@
 ! vim: ft=xdefaults
+
 XTerm*boldColors:      false
 XTerm*cursorBlink:     true
 XTerm*faceName:        Noto

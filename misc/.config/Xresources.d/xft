@@ -1,4 +1,5 @@
 ! vim: ft=xdefaults
+
 Xft.antialias: 1
 Xft.autohint: 0
 Xft.hinting: 1
