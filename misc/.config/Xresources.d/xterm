@@ -4,6 +4,7 @@ XTerm*cursorBlink:     true
 XTerm*faceName:        Noto
 XTerm*faceSize:        8
 XTerm*formatOtherKeys: 1
+XTerm*metaSendsEscape: true
 XTerm*modifyOtherKeys: 1
 XTerm*termName:        xterm-256color
 XTerm*utf8:            1
