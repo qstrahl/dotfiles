@@ -1,0 +1,9 @@
+! vim: ft=xdefaults
+XTerm*utf8:            1
+XTerm*formatOtherKeys: 1
+XTerm*modifyOtherKeys: 1
+XTerm*faceName:        Noto
+XTerm*faceSize:        8
+XTerm*boldColors:      false
+XTerm*termName:        xterm-256color
+XTerm*cursorBlink:     true
