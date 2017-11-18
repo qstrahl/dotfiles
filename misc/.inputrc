@@ -29,6 +29,7 @@ set keymap vi-insert
 "\e[F":         end-of-line
 "\e[H":         beginning-of-line
 "^K":           previous-history
+"\n":           next-history
 
 set keymap vi-command
 "\`":           backward-word
@@ -70,4 +71,5 @@ set keymap vi-command
 "^K":           previous-history
 "j":            next-history
 "k":            previous-history
+"\n":           next-history
 "~":            backward-word
