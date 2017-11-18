@@ -1,17 +1,17 @@
 ! vim: ft=xdefaults
 
 XTerm*backarrowKey: false
-XTerm*boldColors:      false
-XTerm*cursorBlink:     true
-XTerm*faceName:        Noto
-XTerm*faceSize:        8
+XTerm*boldColors: false
+XTerm*cursorBlink: true
+XTerm*faceName: Noto
+XTerm*faceSize: 8
 XTerm*formatOtherKeys: 2
 XTerm*fullscreen: never
 XTerm*geometry: 120x50
 XTerm*metaSendsEscape: true
 XTerm*modifyOtherKeys: 1
-XTerm*termName:        xterm-256color
-XTerm*utf8:            1
+XTerm*termName: xterm-256color
+XTerm*utf8: 1
 XTerm*translations: #override \n\
     Ctrl Shift <Key>C: copy-selection(CLIPBOARD) \n\
     Ctrl Shift <Key>V: insert-selection(CLIPBOARD) \n\
