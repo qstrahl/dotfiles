@@ -1,7 +1,7 @@
 ! vim: ft=xdefaults
 
 XTerm*allowWindowOps: true
-XTerm*backarrowKey: false
+XTerm*backarrowKeyIsErase: true
 XTerm*boldColors: false
 XTerm*cursorBlink: true
 XTerm*faceName: Noto
