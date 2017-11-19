@@ -17,9 +17,6 @@ XTerm*utf8: 1
 XTerm*utf8Title: true
 
 XTerm*translations: #override \n\
-    Ctrl <Key>Enter: string("\033[77;5u") \n\
-    Shift <Key>Enter: string("\033[77;2u") \n\
-    Ctrl Shift <Key>Enter: string("\033[77;6u") \n\
     Ctrl <Key>BackSpace: string("\033[127;5u") \n\
     Shift <Key>BackSpace: string("\033[127;2u") \n\
     Ctrl Shift <Key>BackSpace: string("\033[127;6u")
