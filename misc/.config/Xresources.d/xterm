@@ -6,6 +6,12 @@ XTerm*boldColors: false
 XTerm*cursorBlink: true
 XTerm*faceName: Noto
 XTerm*faceSize: 8
+XTerm*faceSize1: 9
+XTerm*faceSize2: 10
+XTerm*faceSize3: 11
+XTerm*faceSize4: 12
+XTerm*faceSize5: 13
+XTerm*faceSize6: 14
 XTerm*formatOtherKeys: 1
 XTerm*fullscreen: never
 XTerm*geometry: 120x50
