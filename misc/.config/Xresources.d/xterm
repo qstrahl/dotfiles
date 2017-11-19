@@ -1,5 +1,6 @@
 ! vim: ft=xdefaults
 
+XTerm*allowWindowOps: true
 XTerm*backarrowKey: false
 XTerm*boldColors: false
 XTerm*cursorBlink: true
