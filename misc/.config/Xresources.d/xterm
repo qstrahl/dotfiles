@@ -14,6 +14,7 @@ XTerm*modifyOtherKeys: 1
 XTerm*selectToClipboard: true
 XTerm*termName: xterm-256color
 XTerm*utf8: 1
+XTerm*utf8Title: true
 
 XTerm*translations: #override \n\
     Ctrl <Key>Enter: string("\033[77;5u") \n\
