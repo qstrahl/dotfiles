@@ -16,7 +16,7 @@ XTerm*termName: xterm-256color
 XTerm*utf8: 1
 XTerm*utf8Title: true
 
-XTerm*translations: #override \n\
+XTerm*vt100.translations: #override \
     Ctrl Shift <Key>BackSpace: string("\033[127;6u")
     Ctrl <Key>BackSpace: string("\033[127;5u") \n\
     Shift <Key>BackSpace: string("\033[127;2u") \n\
