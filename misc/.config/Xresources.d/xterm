@@ -11,6 +11,7 @@ XTerm*fullscreen: never
 XTerm*geometry: 120x50
 XTerm*metaSendsEscape: true
 XTerm*modifyOtherKeys: 1
+XTerm*selectToClipboard: true
 XTerm*termName: xterm-256color
 XTerm*utf8: 1
 
