@@ -14,6 +14,7 @@ export LESS='-F -g -i -M -R -S -w -X -z-4'
 
 # FZF config
 export FZF_DEFAULT_COMMAND="rg -uu -g '!.git' -l ''"
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # Include per-user bins
 export PATH="$HOME/bin:$HOME/.local/bin:$PATH"
