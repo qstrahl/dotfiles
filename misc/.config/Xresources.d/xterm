@@ -16,6 +16,7 @@ XTerm*faceSize6: 20
 XTerm*formatOtherKeys: 1
 XTerm*fullscreen: never
 XTerm*geometry: 120x50
+XTerm*internalBorder: 0
 XTerm*metaSendsEscape: true
 XTerm*modifyOtherKeys: 1
 XTerm*selectToClipboard: true
