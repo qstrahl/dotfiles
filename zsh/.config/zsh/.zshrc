@@ -96,3 +96,6 @@ zstyle ':completion:*' matcher-list '' \
   'r:|?=** m:{a-z\-}={A-Z\_}'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Set cursor shape (blinking block)
+tput Ss 1
