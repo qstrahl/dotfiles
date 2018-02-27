@@ -21,7 +21,7 @@ export PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 
 if command -v ruby >/dev/null && command -v gem >/dev/null; then
   # Set user-local GEM_HOME
-  export GEM_HOME="$(ruby -rubygems -e 'puts Gem.user_dir')"
+  export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
 
   # Add gem bins in path
   export PATH="$GEM_HOME/bin:$PATH"
