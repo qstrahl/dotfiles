@@ -17,11 +17,20 @@
 [core]
 	excludesfile = ~/.gitignore
 [alias]
+	branches = !git branch | cut -c1,2 --complement
+	fix = commit --amend --no-edit
 	fixup = commit --amend --no-edit
-	please = push --force-with-lease
-	stat = status --short
 	fucked = reset --hard FETCH_HEAD
-	refs = !(cd "$(git rev-parse --git-dir)/refs" && find -type f) | cut -d/ -f1,2 --complement
-	heads = !(cd "$(git rev-parse --git-dir)/refs/heads" && find -type f) | cut -d/ -f1 --complement
+	please = push --force-with-lease
+
+	br = branch
+	brs = !git branch | cut -c1,2 --complement
+	cm = commit
+	co = checkout
+	ls = ls-files
+	pls = push --force-with-lease
+	rb = rebase
+	st = status
+	up = remote update
 [include]
         path = .gitconfig.local
