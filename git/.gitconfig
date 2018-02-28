@@ -10,6 +10,8 @@
 	user = qstrahl
 [rebase]
 	autoStash = true
+[pretty]
+	oneline-fixed = format:%C(auto)%h %C(auto)%s%C(auto)%d
 [pull]
 	rebase = true
 [fetch]
