@@ -29,6 +29,7 @@
 	brs = !git branch | cut -c1,2 --complement
 	cm = commit
 	co = checkout
+	lg = log --pretty=oneline-fixed
 	ls = ls-files
 	pls = push --force-with-lease
 	rb = rebase
