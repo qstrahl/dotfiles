@@ -28,6 +28,7 @@
 	br = branch
 	brs = !git branch | cut -c1,2 --complement
 	cm = commit
+	cma = commit --amend
 	co = checkout
 	lg = log --pretty=oneline-fixed
 	ls = ls-files
