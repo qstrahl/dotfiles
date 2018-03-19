@@ -13,6 +13,7 @@ autoload -Uz surround
 # load antigen plugins
 source "$ZDOTDIR/antigen/bin/antigen.zsh"
 antigen bundles <<END
+  asdf
   mafredri/zsh-async
   sindresorhus/pure
   hlissner/zsh-autopair
