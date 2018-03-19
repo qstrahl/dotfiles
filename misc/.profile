@@ -45,6 +45,7 @@ export NVM_DIR="$HOME/.nvm"
 
 if [[ -z "$NODE_PATH" ]] && command -v npm >/dev/null 2>&1; then
   export NODE_PATH="$(npm root -g)"
+  export PATH="$(npm bin -g 2>/dev/null):$PATH"
 fi
 
 export NODE_ENV="development"
