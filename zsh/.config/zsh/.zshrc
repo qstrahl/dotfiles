@@ -12,7 +12,7 @@ autoload -Uz surround
 
 # load antigen plugins
 source "$ZDOTDIR/antigen/bin/antigen.zsh"
-antigen bundles <<END
+bundles=(
   asdf
   mafredri/zsh-async
   sindresorhus/pure
@@ -21,7 +21,8 @@ antigen bundles <<END
   zsh-users/zsh-completions
   zsh-users/zsh-history-substring-search
   zsh-users/zsh-syntax-highlighting
-END
+)
+for bundle in $bundles; do antigen bundle "$bundle"; done
 
 # pairs text objects
 zle -N select-bracketed
