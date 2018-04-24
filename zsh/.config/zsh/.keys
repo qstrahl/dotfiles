@@ -47,6 +47,7 @@ bindkey -v "^K"         history-substring-search-up     # ctrl-k
 bindkey -v "\e[B"       history-substring-search-down   # down
 bindkey -v "\n"         history-substring-search-down   # ctrl-j
 bindkey -v "\e[106;5u"  history-substring-search-down   # ctrl-j (fixterms)
+bindkey -v "\e[Z"       reverse-menu-complete           # shift-tab
 
 # cmd mode keys
 bindkey -a "\e[H"       vi-beginning-of-line            # home
@@ -95,3 +96,4 @@ bindkey -a "^K"         history-substring-search-up     # ctrl-k
 bindkey -a "\e[B"       history-substring-search-down   # down
 bindkey -a "\n"         history-substring-search-down   # ctrl-j
 bindkey -a "\e[106;5u"  history-substring-search-down   # ctrl-j (fixterms)
+bindkey -a "\e[Z"       reverse-menu-complete           # shift-tab
