@@ -30,6 +30,9 @@ set keymap vi-insert
 "\e[H":         beginning-of-line
 "^K":           previous-history
 "\n":           next-history
+"\e[1~":        beginning-of-line
+"\e[3~":        delete-char
+"\e[4~":        end-of-line
 
 set keymap vi-command
 "\`":           backward-word
@@ -73,3 +76,6 @@ set keymap vi-command
 "k":            previous-history
 "\n":           next-history
 "~":            backward-word
+"\e[1~":        beginning-of-line
+"\e[3~":        delete-char
+"\e[4~":        end-of-line
