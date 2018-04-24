@@ -73,6 +73,7 @@ setopt hist_save_no_dups
 setopt hist_verify
 setopt inc_append_history
 setopt share_history
+setopt menu_complete
 
 # tmuxifier
 if (( $+commands[tmuxifier] )); then
