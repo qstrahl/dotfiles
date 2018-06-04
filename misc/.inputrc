@@ -1,4 +1,5 @@
 set editing-mode vi
+set enable-keypad on
 
 set keymap vi-insert
 "\e[106;5u":    next-history
