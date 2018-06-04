@@ -43,9 +43,11 @@ export TERMINFO_DIRS="$HOME/.terminfo:$TERMINFO_DIRS"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
 
-if [[ -z "$NODE_PATH" ]] && command -v npm >/dev/null 2>&1; then
-  export NODE_PATH="$(npm root -g)"
+if command -v npm >/dev/null 2>&1; then
   export PATH="$(npm bin -g 2>/dev/null):$PATH"
+  if [[ -z "$NODE_PATH" ]]; then
+    export NODE_PATH="$(npm root -g)"
+  fi
 fi
 
 export NODE_ENV="development"
