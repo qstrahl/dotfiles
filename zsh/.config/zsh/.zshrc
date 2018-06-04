@@ -75,6 +75,9 @@ setopt inc_append_history
 setopt share_history
 setopt menu_complete
 
+# Enable shell substitution in prompts
+setopt prompt_subst
+
 # tmuxifier
 if (( $+commands[tmuxifier] )); then
   eval "$(tmuxifier init -)"
