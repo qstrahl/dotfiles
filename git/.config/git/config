@@ -19,9 +19,7 @@
 [core]
 	excludesfile = ~/.gitignore
 [diff]
-	wordRegex = \\w+|\\S
-[diff "jsx"]
-	wordRegex = (</?)?\\w+>?|\\S
+	wordRegex = [[:upper:][:digit:]_]+|[[:lower:][:digit:]_]+|(</?)?\\w+>?|\\[:\\w+:\\]|\\S
 [alias]
 	branches = !git branch | cut -c1,2 --complement
 	fix = commit --amend --no-edit
