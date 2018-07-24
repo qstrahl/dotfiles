@@ -28,6 +28,7 @@
 	fixup = commit --amend --no-edit
 	fucked = reset --hard FETCH_HEAD
 	please = push --force-with-lease
+	wd = diff --color-words
 	wdiff = diff --color-words
 
 	br = branch
