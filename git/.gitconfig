@@ -26,6 +26,7 @@
 	fixup = commit --amend --no-edit
 	fucked = reset --hard FETCH_HEAD
 	please = push --force-with-lease
+	wdiff = diff --color-words
 
 	br = branch
 	brs = !git branch | cut -c1,2 --complement
