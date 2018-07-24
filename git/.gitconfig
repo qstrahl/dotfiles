@@ -19,7 +19,7 @@
 [core]
 	excludesfile = ~/.gitignore
 [diff]
-	wordRegex = [[:alnum:]]+|[[:punct:]]+
+	wordRegex = \\w+|.
 [alias]
 	branches = !git branch | cut -c1,2 --complement
 	fix = commit --amend --no-edit
