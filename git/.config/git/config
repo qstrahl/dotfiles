@@ -18,6 +18,8 @@
 	prune = true
 [core]
 	excludesfile = ~/.gitignore
+[difftool]
+	prompt = false
 [diff]
 	wordRegex = "\\w+|\\S"
 [alias]
