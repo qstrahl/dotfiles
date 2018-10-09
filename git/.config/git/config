@@ -30,23 +30,35 @@
 	abbrevCommit = true
 	follow = true
 [alias]
-	branches = !git branch | cut -c1,2 --complement
-	fix = commit --amend --no-edit
-	fixup = commit --amend --no-edit
-	fucked = reset --hard FETCH_HEAD
-	please = push --force-with-lease
-	wd = diff --color-words
-	wdiff = diff --color-words
-
-	br = branch
-	brs = !git branch | cut -c1,2 --complement
-	cm = commit
+	; amend the last commit
+	amend = commit --amend
 	cma = commit --amend
-	co = checkout
-	lg = log --pretty=oneline-fixed
-	ls = ls-files
+	squash = commit --amend
+
+	; ammend the last commit without modifying the commit message
+	fixup = commit --amend --no-edit
+	fix = commit --amend --no-edit
+
+	; hard reset to FETCH_HEAD; fuck everything I did
+	fucked = reset --hard FETCH_HEAD
+
+	; push, force with lease
+	please = push --force-with-lease
 	pls = push --force-with-lease
+
+	; shorthands for various ops, with my favourite flags enabled (like --color-words) where applicable:
+	br = branch
+	cm = commit
+	co = checkout
+	dif = diff --color-words
+	dt = difftool
+	lg = log --color-words
+	lg1 = log --color-words --pretty=oneline-fixed
+	lgr = log --color-words --reverse
+	lgr1 = log --color-words --reverse --pretty=oneline-fixed
+	ls = ls-files
 	rb = rebase
+	sho = show --color-words
 	st = status
 	up = remote update
 [include]
