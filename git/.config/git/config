@@ -24,6 +24,8 @@
 	wordRegex = "\\w+|\\S"
 [diff "jsx"]
 	wordRegex = "</?\\w+|\\w+|\\S"
+[pager]
+	difftool = false
 [alias]
 	branches = !git branch | cut -c1,2 --complement
 	fix = commit --amend --no-edit
