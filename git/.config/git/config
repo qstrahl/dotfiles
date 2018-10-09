@@ -26,6 +26,9 @@
 	wordRegex = "</?\\w+|\\w+|\\S"
 [pager]
 	difftool = false
+[log]
+	abbrevCommit = true
+	follow = true
 [alias]
 	branches = !git branch | cut -c1,2 --complement
 	fix = commit --amend --no-edit
