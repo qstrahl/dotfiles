@@ -23,9 +23,9 @@
 [diff]
 	algorithm = histogram
 	colorMoved = zebra
-	wordRegex = "\\w+|\\S"
+	wordRegex = "\\w+|[[:punct:]]"
 [diff "jsx"]
-	wordRegex = "</?\\w+|\\w+|\\S"
+	wordRegex = "</?\\w+|\\w+|[[:punct:]]"
 [pager]
 	difftool = false
 [log]
