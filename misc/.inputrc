@@ -33,6 +33,9 @@ set keymap vi-insert
 "\n":           next-history
 "\e[1~":        beginning-of-line
 "\e[3~":        delete-char
+"\e[3;2~":      kill-word
+"\e[3;5~":      kill-word
+"\e[3;6~":      kill-word
 "\e[4~":        end-of-line
 
 set keymap vi-command
@@ -79,4 +82,7 @@ set keymap vi-command
 "~":            backward-word
 "\e[1~":        beginning-of-line
 "\e[3~":        delete-char
+"\e[3;2~":      kill-word
+"\e[3;5~":      kill-word
+"\e[3;6~":      kill-word
 "\e[4~":        end-of-line

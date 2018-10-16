@@ -21,6 +21,10 @@ bindkey -v "\e[1;6F"    vi-end-of-line                  # ctrl-shift-end
 bindkey -v "\e[32;2u"   magic-space                     # shift-space
 bindkey -v "\e[32;6u"   magic-space                     # ctrl-shift-space
 bindkey -v "^?"         backward-delete-char            # backspace
+bindkey -v "\e[3~"      delete-char                     # delete
+bindkey -v "\e[3;2~"    delete-word                     # shift-delete
+bindkey -v "\e[3;5~"    delete-word                     # ctrl-delete
+bindkey -v "\e[3;6~"    delete-word                     # ctrl-shift-delete
 bindkey -v "^W"         backward-kill-word
 bindkey -v "\e[127;5u"  backward-kill-word              # ctrl-backspace
 bindkey -v "\e[127;2u"  backward-kill-word              # shift-backspace
@@ -67,6 +71,10 @@ bindkey -a "\e[1;6F"    vi-end-of-line                  # ctrl-shift-end
 bindkey -a "\e[32;2u"   magic-space                     # shift-space
 bindkey -a "\e[32;6u"   magic-space                     # ctrl-shift-space
 bindkey -a "^?"         backward-char                   # backspace
+bindkey -a "\e[3~"      vi-delete-char                  # delete
+bindkey -a "\e[3;2~"    delete-word                     # shift-delete
+bindkey -a "\e[3;5~"    delete-word                     # ctrl-delete
+bindkey -a "\e[3;6~"    delete-word                     # ctrl-shift-delete
 bindkey -a "\e[127;5u"  backward-word                   # ctrl-backspace
 bindkey -a "\e[127;2u"  backward-word                   # shift-backspace
 bindkey -a "\e[127;6u"  backward-word                   # ctrl-shift-backspace
