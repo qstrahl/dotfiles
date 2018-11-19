@@ -48,6 +48,11 @@
 	please = push --force-with-lease
 	pls = push --force-with-lease
 
+	; rebase sub-op shortcuts
+	rbc = rebase --continue
+	rbs = rebase --skip
+	rba = rebase --abort
+
 	; shorthands for various ops, with my favourite flags enabled (like --color-words) where applicable:
 	br = branch
 	cm = commit
