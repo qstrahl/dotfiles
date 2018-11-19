@@ -68,5 +68,6 @@
 	sho = show --color-words
 	st = status
 	up = remote update
+	dtr = diff-tree --no-commit-id --name-only -r
 [include]
         path = .gitconfig.local
