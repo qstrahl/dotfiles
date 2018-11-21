@@ -23,11 +23,28 @@
 [diff]
 	algorithm = histogram
 	colorMoved = zebra
+	tool = icdiff
 	wordRegex = "\\w+|[[:punct:]]"
 [diff "jsx"]
 	wordRegex = "</?\\w+|\\w+|[[:punct:]]"
+[difftool "colordiff"]
+	cmd = colordiff -y "$LOCAL" "$REMOTE"
+[difftool "cwdiff"]
+	cmd = cwdiff "$LOCAL" "$REMOTE"
+[difftool "diff"]
+	cmd = diff -y -w -W "$(tput cols)" --color=always --label "$LOCAL" "$LOCAL" "$REMOTE"
+[difftool "dwdiff"]
+	cmd = dwdiff -A best -c -C 3 -m 10 -P "$LOCAL" "$REMOTE"
+[difftool "icdiff"]
+	cmd = icdiff -L "$REMOTE" -L "$REMOTE" --no-bold "$LOCAL" "$REMOTE"
+[difftool "sdiff"]
+	cmd = sdiff -w $(tput cols) -BWd "$LOCAL" "$REMOTE"
+[difftool  "vim"]
+	cmd = vim -d "$LOCAL" "$REMOTE"
+[difftool "ydiff"]
+	cmd = git diff "$LOCAL" "$REMOTE" | ydiff -w 0 -s
 [pager]
-	difftool = false
+	difftool = true
 [log]
 	abbrevCommit = true
 	follow = true
