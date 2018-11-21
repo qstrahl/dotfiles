@@ -73,6 +73,9 @@ alias sudo='sudo '
 alias trash='gvfs-trash'
 alias xvfb-run='xvfb-run -a -s "-screen 0 1920x1080x24" '
 
+# stupid virtualbox and its stupid crap
+alias fixvbox='killall VBoxClient && VBoxClient-all'
+
 # unfortunately necessary to make some xdg stuff work
 export DE="gnome"
 export GDK_SCALE=1
