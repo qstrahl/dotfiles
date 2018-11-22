@@ -69,6 +69,7 @@
 	rbc = rebase --continue
 	rbs = rebase --skip
 	rba = rebase --abort
+	rbe = rebase --edit-todo
 
 	; shorthands for various ops, with my favourite flags enabled (like --color-words) where applicable:
 	br = branch
