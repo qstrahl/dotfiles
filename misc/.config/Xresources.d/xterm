@@ -5,14 +5,14 @@ XTerm*backarrowKeyIsErase: true
 XTerm*boldColors: false
 XTerm*cursorBlink: true
 XTerm*cursorBlinkXOR: false
-XTerm*faceName: Unifont
-XTerm*faceSize: 7
-XTerm*faceSize1: 7
-XTerm*faceSize2: 10
-XTerm*faceSize3: 12
-XTerm*faceSize4: 15
-XTerm*faceSize5: 17
-XTerm*faceSize6: 20
+XTerm*faceName: xft:Ubuntu Mono
+XTerm*faceSize: 16
+XTerm*faceSize1: 14
+XTerm*faceSize2: 16
+XTerm*faceSize3: 18
+XTerm*faceSize4: 20
+XTerm*faceSize5: 22
+XTerm*faceSize6: 24
 XTerm*formatOtherKeys: 1
 XTerm*fullscreen: never
 XTerm*geometry: 120x50
