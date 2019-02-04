@@ -63,6 +63,7 @@ fi
 alias activator='activator -Duser.timezone=GMT -mem 2048'
 alias scut='cut -d" " -f'
 alias fuck='sudo $(fc -ln -1)'
+alias irc='mosh qstrahl.com tmux a'
 alias ls='ls --group-directories-first --color=auto'
 alias mux='tmuxifier'
 alias nox='xvfb-run '
