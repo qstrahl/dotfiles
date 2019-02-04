@@ -1,6 +1,6 @@
 if initialize_session "update"; then
   new_window
-  run_cmd "aurman -Syu"
+  run_cmd "yay -Syu"
 
   new_window
   run_cmd "antigen update"
