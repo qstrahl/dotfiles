@@ -25,6 +25,8 @@ XTerm*utf8: 1
 XTerm*utf8Title: true
 
 XTerm*vt100.translations: #override \
+    Ctrl Shift <Key>C: copy-selection(CLIPBOARD) \n\
+    Ctrl Shift <Key>V: insert-selection(CLIPBOARD) \n\
     Ctrl <Key>+: larger-vt-font() \n\
     Ctrl <Key>-: smaller-vt-font() \n\
     Ctrl Shift <Key>BackSpace: string("\033[127;6u") \n\
