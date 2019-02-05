@@ -21,6 +21,7 @@ XTerm*metaSendsEscape: true
 XTerm*modifyOtherKeys: 1
 XTerm*selectToClipboard: true
 XTerm*termName: xterm-256color
+XTerm*useClipping: false
 XTerm*utf8: 1
 XTerm*utf8Title: true
 
