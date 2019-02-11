@@ -3,6 +3,7 @@
 XTerm*allowWindowOps: true
 XTerm*backarrowKeyIsErase: true
 XTerm*boldColors: false
+XTerm*borderWidth: 0
 XTerm*cursorBlink: true
 XTerm*cursorBlinkXOR: false
 XTerm*faceName: xft:Ubuntu Mono
