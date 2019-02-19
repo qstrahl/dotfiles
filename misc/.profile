@@ -86,3 +86,8 @@ alias fixvbox='killall VBoxClient && VBoxClient-all'
 # unfortunately necessary to make some xdg stuff work
 export DE="gnome"
 export GDK_SCALE=1
+
+# automatically start x on login
+if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
+  exec startx
+fi
