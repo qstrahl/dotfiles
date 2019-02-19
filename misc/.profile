@@ -13,6 +13,12 @@ export TERMINAL="xterm"
 export LESS='-F -g -i -M -R -S -w -X -z-4'
 
 # FZF config
+# Solarized colors
+export FZF_DEFAULT_OPTS="
+  --color=bg+:#073642,bg:#002b36,spinner:#859900,hl:#b58900
+  --color=fg:#839496,header:#586e75,info:#cb4b16,pointer:#839496
+  --color=marker:#859900,fg+:#839496,prompt:#859900,hl+:#b58900
+"
 export FZF_DEFAULT_COMMAND="rg -uu -g '!.git' -l ''"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
