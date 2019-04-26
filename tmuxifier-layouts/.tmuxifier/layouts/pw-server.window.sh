@@ -1,3 +1,3 @@
 window_root "~/pw-server"
 new_window "pw-server"
-run_cmd "mix phx.server"
+run_cmd "iex -S mix phx.server"

@@ -1,3 +1,3 @@
 window_root "~/portfolios"
 new_window "portfolios"
-run_cmd "mix phx.server"
+run_cmd "iex -S mix phx.server"
