@@ -2,10 +2,10 @@ if initialize_session "planswell"; then
   load_window "htop"
   load_window "irc"
   load_window "portfolios"
-  load_window "kyc"
-  load_window "kyc-ui"
   load_window "pw-server"
   load_window "pw-react"
+  load_window "empire"
+  load_window "design"
   new_window
 fi
 
