@@ -71,6 +71,9 @@
 	rba = rebase --abort
 	rbe = rebase --edit-todo
 
+	; list files sorted by edit rate
+	hotspots = "!for file in `git ls-files`; do echo `git log --oneline --follow -- $file | wc -l` $file; done | sort -n"
+
 	; shorthands for various ops, with my favourite flags enabled (like --color-words) where applicable:
 	br = branch
 	cm = commit
