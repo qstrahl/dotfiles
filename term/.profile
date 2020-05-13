@@ -1,26 +1,21 @@
 # vim: ft=sh
-
+[[ -f "$HOME/.config/base16-shell/base16-twilight.sh" ]] && source "$HOME/.config/base16-shell/base16-twilight.sh"
 # The one and only
 export EDITOR="$(command -v nvim || command -v vim || command -v vi)"
 export VISUAL="$EDITOR"
-export PAGER="$(command -v less || command -v more)"
-
+export BROWSER="w3m"
+export PAGER="$(command -v bat || command -v less || command -v more)"
+export MANPAGER="bat"
 export TERMINAL="xterm"
-
-# Set the default Less options.
-# Mouse-wheel scrolling has been disabled by -X (disable screen clearing).
-# Remove -X and -F (exit if the content fits on one screen) to enable it.
-export LESS='-F -g -i -M -R -S -w -X -z-4'
-
-# FZF config
-# Solarized colors
-export FZF_DEFAULT_OPTS="
-  --color=bg+:#073642,bg:#002b36,spinner:#859900,hl:#b58900
-  --color=fg:#839496,header:#586e75,info:#cb4b16,pointer:#839496
-  --color=marker:#859900,fg+:#839496,prompt:#859900,hl+:#b58900
-"
-export FZF_DEFAULT_COMMAND="rg -uu -g '!.git' -l ''"
+export COLORTERM="truecolor"
+export LESS="-F -g -i -M -Q -R -S -z-2 --mouse --no-histdups --rscroll=*n- --wheel-lines=1"
+export RIPGREP_CONFIG_PATH="$HOME/.config/ripgreprc"
+export FZF_DEFAULT_OPTS="--inline-info"
+fd="fd -HI --exclude .git -t f"
+export FZF_DEFAULT_COMMAND="$fd -t f"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_CTRL_T_OPTS="--preview 'bat {}'"
+export FZF_ALT_C_COMMAND="$fd -t d"
 
 # Include per-user bins
 export PATH="$HOME/bin:$HOME/.local/bin:$PATH"
@@ -67,21 +62,23 @@ fi
 
 # aliases
 alias activator='activator -Duser.timezone=GMT -mem 2048'
-alias scut='cut -d" " -f'
 alias fuck='sudo $(fc -ln -1)'
+alias git='noglob git'
 alias irc='mosh qstrahl.com tmux a'
 alias ls='ls --group-directories-first --color=auto'
-alias mux='tmuxifier'
 alias nox='xvfb-run '
 alias optirun='optirun '
 alias primusrun='primusrun '
 alias record='asciinema rec'
+alias scut='cut -d" " -f'
 alias sudo='sudo '
 alias trash='gvfs-trash'
 alias xvfb-run='xvfb-run -a -s "-screen 0 1920x1080x24" '
 
 # stupid virtualbox and its stupid crap
 alias fixvbox='killall VBoxClient && VBoxClient-all'
+
+alias xrdbm="xrdb -merge "
 
 # unfortunately necessary to make some xdg stuff work
 export DE="gnome"

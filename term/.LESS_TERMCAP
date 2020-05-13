@@ -1,0 +1,18 @@
+# export LESS_TERMCAP_mb=$(tput blink)                            # mb = blinking mode (start)    
+# export LESS_TERMCAP_md=$(tput bold)                             # md = bold mode (start)        
+# export LESS_TERMCAP_me=$(tput sgr0)                             # me = END all modes            
+# export LESS_TERMCAP_mh=$(tput dim)                              # mh = half bright mode (start) 
+# export LESS_TERMCAP_mr=$(tput rev)                              # mr = reverse mode (start)     
+
+# export LESS_TERMCAP_se=$(tput rmso)                             # se = END standout mode        
+# export LESS_TERMCAP_so=$(tput bold)                             # so = standout mode (start)    
+
+# export LESS_TERMCAP_us=$(tput smul)                             # us = underlining (start)      
+# export LESS_TERMCAP_ue=$(tput rmul)                             # ue = END underlining          
+
+# export LESS_TERMCAP_ZH=$(tput sitm)                             # ZH = italic mode (start)       
+# export LESS_TERMCAP_ZR=$(tput ritm)                             # ZR = END italic mode           
+# export LESS_TERMCAP_ZN=$(tput ssubm)                            # ZN = subscript mode (start)    
+# export LESS_TERMCAP_ZV=$(tput rsubm)                            # ZV = END subscript mode        
+# export LESS_TERMCAP_ZO=$(tput ssupm)                            # ZO = superscript mode (start)  
+# export LESS_TERMCAP_ZW=$(tput rsupm)                            # ZW = END superscript mode      

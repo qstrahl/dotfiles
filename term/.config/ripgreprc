@@ -1,0 +1,15 @@
+--color=auto
+--colors=line:fg:black
+--colors=line:style:nobold
+--colors=line:style:intense
+--colors=path:fg:blue
+--colors=path:style:bold
+--colors=match:fg:black
+--colors=match:bg:yellow
+--colors=match:style:nobold
+--no-column
+--smart-case
+--no-ignore
+--hidden
+--glob=!.git/
+--glob=!*hist*
