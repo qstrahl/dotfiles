@@ -96,4 +96,7 @@ zstyle ':completion:*' matcher-list '' \
   'r:[^[:alpha:]]||[[:alpha:]]=** r:|=* m:{a-z\-}={A-Z\_}' \
   'r:|?=** m:{a-z\-}={A-Z\_}'
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# FZF!
+[ -f /usr/share/fzf/completion.zsh ] && source /usr/share/fzf/completion.zsh
+[ -f /usr/share/fzf/key-bindings.zsh ] && source /usr/share/fzf/key-bindings.zsh
+[ -f ./base16-fzf/base16-twilight.config ] && source ./base16-fzf/base16-twilight.config
