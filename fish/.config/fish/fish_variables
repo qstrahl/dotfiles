@@ -1,0 +1,53 @@
+# This file contains fish universal variable definitions.
+# VERSION: 3.0
+SETUVAR BROWSER:w3m
+SETUVAR COLORTERM:truecolor
+SETUVAR --export EDITOR:nvim
+SETUVAR --export FZF_CTRL_T_COMMAND:fd\x20\x2dHIL\x20\x2dE\x20\x2egit\x20\x2dt\x20f
+SETUVAR --export FZF_DEFAULT_COMMAND:fd\x20\x2dHIL\x20\x2dE\x20\x2egit\x20\x2dt\x20f
+SETUVAR --export FZF_DEFAULT_OPTS:\x2d\x2dinline\x2dinfo\x20\x2d\x2dheight\x200\x20\x2d\x2dpreview\x20\x27fzf\x2dpreview\x20\x7b\x7d\x27\x20\x2d\x2dpreview\x2dwindow\x3dright\x3a60\x25
+SETUVAR --export LESS:\x2dF\x20\x2dg\x20\x2di\x20\x2dM\x20\x2dQ\x20\x2dR\x20\x2dS\x20\x2dz\x2d2\x20\x2d\x2dmouse\x20\x2d\x2dno\x2dhistdups\x20\x2d\x2drscroll\x3d\x2an\x2d\x20\x2d\x2dwheel\x2dlines\x3d1
+SETUVAR --export MANPAGER:sh\x20\x2dc\x20\x27col\x20\x2dbx\x20\x7c\x20bat\x20\x2dl\x20man\x27
+SETUVAR NODE_ENV:development
+SETUVAR --export PAGER:bat
+SETUVAR --export --path PATH:/home/qstrahl/bin\x1e/home/qstrahl/\x2elocal/bin\x1e/usr/local/sbin\x1e/usr/local/bin\x1e/usr/bin\x1e/usr/bin/site_perl\x1e/usr/bin/vendor_perl\x1e/usr/bin/core_perl
+SETUVAR --export --path RIPGREP_CONFIG_PATH:/home/qstrahl/\x2econfig/ripgreprc
+SETUVAR TERMINAL:xterm
+SETUVAR VISUAL:nvim
+SETUVAR Z_DATA_DIR:/home/qstrahl/\x2elocal/share/z
+SETUVAR __fish_init_2_39_8:\x1d
+SETUVAR __fish_init_2_3_0:\x1d
+SETUVAR __fish_init_3_x:\x1d
+SETUVAR fish_color_autosuggestion:brblack
+SETUVAR fish_color_cancel:\x2dr
+SETUVAR fish_color_command:green
+SETUVAR fish_color_comment:brblack
+SETUVAR fish_color_cwd:brblue
+SETUVAR fish_color_cwd_root:red
+SETUVAR fish_color_end:brblack
+SETUVAR fish_color_error:red
+SETUVAR fish_color_escape:brmagenta
+SETUVAR fish_color_history_current:\x2do
+SETUVAR fish_color_host:normal
+SETUVAR fish_color_match:brblack\x1e\x2do\x1e\x2db\x1ebrgreen
+SETUVAR fish_color_normal:normal
+SETUVAR fish_color_operator:yellow
+SETUVAR fish_color_param:normal
+SETUVAR fish_color_quote:magenta
+SETUVAR fish_color_redirection:brblue\x1e\x2di
+SETUVAR fish_color_search_match:brblack\x1e\x2db\x1ebryellow
+SETUVAR fish_color_selection:\x2do\x1ebrblack\x1e\x2db\x1ebrgreen
+SETUVAR fish_color_status:red
+SETUVAR fish_color_user:brgreen
+SETUVAR fish_color_valid_path:\x2du
+SETUVAR fish_cursor_default:block
+SETUVAR fish_cursor_insert:line
+SETUVAR fish_cursor_visual:underscore
+SETUVAR fish_greeting:
+SETUVAR fish_key_bindings:fish_hybrid_key_bindings
+SETUVAR fish_pager_color_completion:normal
+SETUVAR fish_pager_color_description:yellow\x1e\x2dd
+SETUVAR fish_pager_color_prefix:white\x1e\x2do
+SETUVAR fish_pager_color_progress:brwhite\x1e\x2db\x1ecyan
+SETUVAR fish_user_paths:/home/qstrahl/bin\x1e/home/qstrahl/\x2elocal/bin\x1e/usr/local/sbin\x1e/usr/local/bin\x1e/usr/bin\x1e/usr/bin/site_perl\x1e/usr/bin/vendor_perl\x1e/usr/bin/core_perl\x1e/opt/asdf\x2dvm/bin/
+SETUVAR pure_version:2\x2e1\x2e8
