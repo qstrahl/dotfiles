@@ -78,11 +78,6 @@ setopt menu_complete
 # Enable shell substitution in prompts
 setopt prompt_subst
 
-# tmuxifier
-if (( $+commands[tmuxifier] )); then
-  eval "$(tmuxifier init -)"
-fi
-
 # custom keys (mostly for pangoterm)
 source "$ZDOTDIR/.keys"
 
