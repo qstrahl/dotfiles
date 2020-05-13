@@ -1,48 +1,42 @@
 ; vim: tabstop=8 noexpandtab shiftwidth=8 softtabstop=8
+[core]
+	excludesfile = ~/.gitignore
 [user]
 	email = qstrahl@gmail.com
 	name = Quinn Strahl
-[push]
-	default = current
-[branch]
-	autosetuprebase = always
 [github]
 	user = qstrahl
-[rebase]
-	autoStash = true
-[pretty]
-	oneline-fixed = format:%C(auto)%h %C(auto)%s%C(auto)%d
-[pull]
-	rebase = true
+[branch]
+	autoSetupRebase = always
 [fetch]
 	prune = true
-[core]
-	excludesfile = ~/.gitignore
+[pull]
+	rebase = true
+[push]
+	default = current
+[rebase]
+	autoStash = true
+	stat = true
+	autoSquash = true
+	missingCommitsCheck = error
+[pretty]
+	oneline-fixed = format:%C(auto)%h %C(auto)%s%C(auto)%d
+[grep]
+	extendedRegexp = true
+; [color]
+; 	ui = auto
 [difftool]
 	prompt = false
 [diff]
 	algorithm = histogram
-	colorMoved = zebra
-	tool = icdiff
+	indentHeuristic = true
 	wordRegex = "\\w+|[[:punct:]]"
 [diff "jsx"]
 	wordRegex = "</?\\w+|\\w+|[[:punct:]]"
-[difftool "colordiff"]
-	cmd = colordiff -y "$LOCAL" "$REMOTE"
-[difftool "cwdiff"]
-	cmd = cwdiff "$LOCAL" "$REMOTE"
 [difftool "diff"]
-	cmd = diff -y -w -W "$(tput cols)" --color=always --label "$LOCAL" "$LOCAL" "$REMOTE"
-[difftool "dwdiff"]
-	cmd = dwdiff -A best -c -C 3 -m 10 -P "$LOCAL" "$REMOTE"
-[difftool "icdiff"]
-	cmd = icdiff -L "$REMOTE" -L "$REMOTE" --no-bold "$LOCAL" "$REMOTE"
-[difftool "sdiff"]
-	cmd = sdiff -w $(tput cols) -BWd "$LOCAL" "$REMOTE"
+	cmd = diff -y -w -W "$(tput cols)" --label "$LOCAL" "$LOCAL" "$REMOTE"
 [difftool  "vim"]
 	cmd = vim -d "$LOCAL" "$REMOTE"
-[difftool "ydiff"]
-	cmd = git diff "$LOCAL" "$REMOTE" | ydiff -w 0 -s
 [pager]
 	difftool = true
 [log]
@@ -52,14 +46,15 @@
 	; amend the last commit
 	amend = commit --amend
 	cma = commit --amend
-	squash = commit --amend
 
-	; ammend the last commit without modifying the commit message
-	fixup = commit --amend --no-edit
-	fix = commit --amend --no-edit
+	; autosquash ftw
+	squash = commit --squash
+	sq     = commit --squash
+	fixup  = commit --fixup
+	fu     = commit --fixup
 
-	; hard reset to FETCH_HEAD; fuck everything I did
-	fucked = reset --hard FETCH_HEAD
+	; hard reset to upstream; fuck everything I did
+	fucked = reset --hard @{u}
 
 	; push, force with lease
 	please = push --force-with-lease
@@ -79,16 +74,24 @@
 	cm = commit
 	co = checkout
 	dif = diff --color-words
+	difu = diff --color-words @{u}
+	diffu = diff @{u}
 	dt = difftool
 	lg = log --color-words
 	lg1 = log --color-words --pretty=oneline-fixed
 	lgr = log --color-words --reverse
 	lgr1 = log --color-words --reverse --pretty=oneline-fixed
+	logu = log @{u}..
+	logu1 = log --oneline @{u}..
+	lgu = log --color-words @{u}..
+	lgu1 = log --color-words --oneline @{u}..
 	ls = ls-files
 	rb = rebase
+	rbi = rebase -i
 	sho = show --color-words
 	st = status
 	up = remote update
 	dtr = diff-tree --no-commit-id --name-only -r
+	rg = grep --untracked
 [include]
         path = .gitconfig.local
