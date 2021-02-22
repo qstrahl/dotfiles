@@ -1,6 +1,11 @@
 ; vim: tabstop=8 noexpandtab shiftwidth=8 softtabstop=8
 [core]
 	excludesfile = ~/.gitignore
+	pager = delta
+[delta]
+	; delta options here
+[interactive]
+	diffFilter = delta --color-only
 [user]
 	email = qstrahl@gmail.com
 	name = Quinn Strahl
