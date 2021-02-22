@@ -10,11 +10,11 @@ SETUVAR --export LESS:\x2dF\x20\x2dg\x20\x2di\x20\x2dM\x20\x2dQ\x20\x2dR\x20\x2d
 SETUVAR --export MANPAGER:sh\x20\x2dc\x20\x27col\x20\x2dbx\x20\x7c\x20bat\x20\x2dl\x20man\x27
 SETUVAR NODE_ENV:development
 SETUVAR --export PAGER:bat
-SETUVAR --export --path PATH:/home/qstrahl/bin\x1e/home/qstrahl/\x2elocal/bin\x1e/usr/local/sbin\x1e/usr/local/bin\x1e/usr/bin\x1e/usr/bin/site_perl\x1e/usr/bin/vendor_perl\x1e/usr/bin/core_perl
-SETUVAR --export --path RIPGREP_CONFIG_PATH:/home/qstrahl/\x2econfig/ripgreprc
+# SETUVAR --export --path PATH:/home/qstrahl/bin\x1e/home/qstrahl/\x2elocal/bin\x1e/usr/local/sbin\x1e/usr/local/bin\x1e/usr/bin\x1e/usr/bin/site_perl\x1e/usr/bin/vendor_perl\x1e/usr/bin/core_perl
+# SETUVAR --export --path RIPGREP_CONFIG_PATH:/home/qstrahl/\x2econfig/ripgreprc
 SETUVAR TERMINAL:xterm
 SETUVAR VISUAL:nvim
-SETUVAR Z_DATA_DIR:/home/qstrahl/\x2elocal/share/z
+# SETUVAR Z_DATA_DIR:/home/qstrahl/\x2elocal/share/z
 SETUVAR __fish_init_2_39_8:\x1d
 SETUVAR __fish_init_2_3_0:\x1d
 SETUVAR __fish_init_3_x:\x1d
@@ -49,5 +49,5 @@ SETUVAR fish_pager_color_completion:normal
 SETUVAR fish_pager_color_description:yellow\x1e\x2dd
 SETUVAR fish_pager_color_prefix:white\x1e\x2do
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2db\x1ecyan
-SETUVAR fish_user_paths:/home/qstrahl/bin\x1e/home/qstrahl/\x2elocal/bin\x1e/usr/local/sbin\x1e/usr/local/bin\x1e/usr/bin\x1e/usr/bin/site_perl\x1e/usr/bin/vendor_perl\x1e/usr/bin/core_perl\x1e/opt/asdf\x2dvm/bin/
+# SETUVAR fish_user_paths:/home/qstrahl/bin\x1e/home/qstrahl/\x2elocal/bin\x1e/usr/local/sbin\x1e/usr/local/bin\x1e/usr/bin\x1e/usr/bin/site_perl\x1e/usr/bin/vendor_perl\x1e/usr/bin/core_perl\x1e/opt/asdf\x2dvm/bin/
 SETUVAR pure_version:2\x2e1\x2e8
