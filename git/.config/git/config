@@ -35,9 +35,9 @@
 [diff]
 	algorithm = histogram
 	indentHeuristic = true
-	wordRegex = "\\w+|[[:punct:]]"
+	; wordRegex = "\\w+|[[:punct:]]"
 [diff "jsx"]
-	wordRegex = "</?\\w+|\\w+|[[:punct:]]"
+	; wordRegex = "</?\\w+|\\w+|[[:punct:]]"
 [difftool "diff"]
 	cmd = diff -y -w -W "$(tput cols)" --label "$LOCAL" "$LOCAL" "$REMOTE"
 [difftool  "vim"]
