@@ -34,7 +34,6 @@
 	prompt = false
 [diff]
 	algorithm = histogram
-	indentHeuristic = true
 	; wordRegex = "\\w+|[[:punct:]]"
 [diff "jsx"]
 	; wordRegex = "</?\\w+|\\w+|[[:punct:]]"
