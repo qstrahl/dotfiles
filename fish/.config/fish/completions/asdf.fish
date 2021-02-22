@@ -1,1 +1,1 @@
-source /opt/asdf-vm/completions/asdf.fish
+source "$ASDF_DIR/asdf.fish"
