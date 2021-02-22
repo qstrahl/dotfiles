@@ -34,6 +34,7 @@
 	prompt = false
 [diff]
 	algorithm = histogram
+	tool = nvim
 	; wordRegex = "\\w+|[[:punct:]]"
 [diff "jsx"]
 	; wordRegex = "</?\\w+|\\w+|[[:punct:]]"
@@ -41,6 +42,12 @@
 	cmd = diff -y -w -W "$(tput cols)" --label "$LOCAL" "$LOCAL" "$REMOTE"
 [difftool  "vim"]
 	cmd = vim -d "$LOCAL" "$REMOTE"
+[difftool  "nvim"]
+	cmd = nvim -d "$LOCAL" "$REMOTE" -c "wincmd w" -c "wincmd J"
+[merge]
+	tool = nvim
+[mergetool  "nvim"]
+	cmd = nvim -d "$LOCAL" "$REMOTE" "$MERGED" -c "wincmd w" -c "wincmd J"
 [pager]
 	difftool = true
 [log]
