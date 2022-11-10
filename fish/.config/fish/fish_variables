@@ -15,6 +15,7 @@ SETUVAR VISUAL:nvim
 SETUVAR __fish_init_2_39_8:\x1d
 SETUVAR __fish_init_2_3_0:\x1d
 SETUVAR __fish_init_3_x:\x1d
+SETUVAR __fish_initialized:3100
 SETUVAR fish_color_autosuggestion:brblack
 SETUVAR fish_color_cancel:\x2dr
 SETUVAR fish_color_command:green
@@ -26,6 +27,7 @@ SETUVAR fish_color_error:red
 SETUVAR fish_color_escape:brmagenta
 SETUVAR fish_color_history_current:\x2do
 SETUVAR fish_color_host:normal
+SETUVAR fish_color_host_remote:yellow
 SETUVAR fish_color_match:brblack\x1e\x2do\x1e\x2db\x1ebrgreen
 SETUVAR fish_color_normal:normal
 SETUVAR fish_color_operator:yellow
