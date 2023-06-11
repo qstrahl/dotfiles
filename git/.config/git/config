@@ -106,3 +106,5 @@
 	rg = grep --untracked
 [include]
         path = .gitconfig.local
+[init]
+	defaultBranch = main
