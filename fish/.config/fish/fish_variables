@@ -1,5 +1,6 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
+SETUVAR --export ASDF_DIR:/home/qstrahl/\x2easdf
 SETUVAR BROWSER:w3m
 SETUVAR COLORTERM:truecolor
 SETUVAR --export EDITOR:nvim
