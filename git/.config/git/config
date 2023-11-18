@@ -30,6 +30,17 @@
 	extendedRegexp = true
 ; [color]
 ; 	ui = auto
+[color "status"]
+	; header = 0
+	branch = 5
+	; localbranch = 5
+	; remotebranch = 5
+	; nobranch = 
+	added = 2
+	updated = 2
+	changed = 3
+	untracked = 6
+	unmerged = 1
 [difftool]
 	prompt = false
 [diff]
