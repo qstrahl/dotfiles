@@ -1,7 +1,7 @@
 ; vim: tabstop=8 noexpandtab shiftwidth=8 softtabstop=8
 [core]
 	excludesfile = ~/.gitignore
-	pager = delta
+	pager = bat
 [delta]
 	; delta options here
 [interactive]
