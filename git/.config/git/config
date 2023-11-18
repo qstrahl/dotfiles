@@ -5,7 +5,7 @@
 [delta]
 	; delta options here
 [interactive]
-	diffFilter = delta --color-only
+	diffFilter = git-delta --color-only
 [user]
 	email = qstrahl@gmail.com
 	name = Quinn Strahl
