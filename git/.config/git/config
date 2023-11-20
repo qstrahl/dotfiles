@@ -116,7 +116,7 @@
 	dtr = diff-tree --no-commit-id --name-only -r
 	rg = grep --untracked
 [include]
-        path = .gitconfig.local
+        path = config.local
 [init]
 	defaultBranch = main
 [filter "lfs"]
