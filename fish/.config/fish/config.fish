@@ -2,6 +2,12 @@
 
 functions -q fzf_key_bindings && fzf_key_bindings
 
+# cursor shape
+set fish_cursor_default block blink
+set fish_cursor_insert line blink
+set fish_cursor_replace_one underscore blink
+set fish_cursor_visual block blink
+
 # extended keys
 set -l cTab \e\[9\;5u
 set -l cEnter \e\[13\;5u
