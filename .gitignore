@@ -1,5 +1,5 @@
 zsh/.config/zsh/.zcompdump
 zsh/.config/zsh/.zcompdump.zwc
 zsh/.config/zsh/.zhistory
-tmux/.tmux/plugins
-^tmux/.tmux/plugins/tpm
+tmux/.config/tmux/plugins
+^tmux/.config/tmux/plugins/tpm

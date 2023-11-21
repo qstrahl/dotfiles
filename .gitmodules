@@ -4,7 +4,7 @@
 	branch = master
 	update = rebase
 [submodule "tpm"]
-	path = tmux/.tmux/plugins/tpm
+	path = tmux/.config/tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm.git
 	branch = master
 	update = rebase
