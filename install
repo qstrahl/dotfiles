@@ -11,7 +11,7 @@ git submodule update --init
 # link dotfiles
 ln -s ${PWD}/git/.config/git ~/.config/git
 ln -s ${PWD}/fish/.config/fish ~/.config/fish
-ln -s ${PWD}/starpship/.config/starship.toml ~/.config/starship.toml
+ln -s ${PWD}/starship/.config/starship.toml ~/.config/starship.toml
 ln -s ${PWD}/tmux/.config/tmux ~/.config/tmux
 ln -s ${PWD}/extrakto/.config/extrakto.conf ~/.config/extrakto.conf
 ln -s ${PWD}/term/.config/bat ~/.config/bat
