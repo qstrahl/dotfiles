@@ -1,6 +1,8 @@
 # status is-login && test -z $DISPLAY && test (tty) = "/dev/tty1" && exec startx -- -keeptty
 
 if status is-interactive
+
+  # fzf keys, maybe
   functions -q fzf_key_bindings && fzf_key_bindings
 
   # cursor shape
