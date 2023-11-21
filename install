@@ -9,14 +9,15 @@ fi
 git submodule update --init
 
 # link dotfiles
-ln -Tfs ${PWD}/git/.config/git ~/.config/git
-ln -Tfs ${PWD}/fish/.config/fish ~/.config/fish
-ln -Tfs ${PWD}/starship/.config/starship.toml ~/.config/starship.toml
-ln -Tfs ${PWD}/tmux/.config/tmux ~/.config/tmux
-ln -Tfs ${PWD}/extrakto/.config/extrakto ~/.config/extrakto
-ln -Tfs ${PWD}/term/.config/bat ~/.config/bat
-ln -Tfs ${PWD}/term/.config/ripgreprc ~/.config/ripgreprc
-ln -Tfs ${PWD}/nvim/.config/nvim ~/.config/nvim
+ln -Tfs "$PWD" ~/dotfiles
+ln -Tfs "$PWD/git/.config/git" ~/.config/git
+ln -Tfs "$PWD/fish/.config/fish" ~/.config/fish
+ln -Tfs "$PWD/starship/.config/starship.toml" ~/.config/starship.toml
+ln -Tfs "$PWD/tmux/.config/tmux" ~/.config/tmux
+ln -Tfs "$PWD/extrakto/.config/extrakto" ~/.config/extrakto
+ln -Tfs "$PWD/term/.config/bat" ~/.config/bat
+ln -Tfs "$PWD/term/.config/ripgreprc" ~/.config/ripgreprc
+ln -Tfs "$PWD/nvim/.config/nvim" ~/.config/nvim
 
 # install build dependencies
 # - cmake required by fish
@@ -24,38 +25,44 @@ ln -Tfs ${PWD}/nvim/.config/nvim ~/.config/nvim
 sudo apt install -y cmake libevent-dev libncurses-dev
 
 # make temporary build directory
-mkdir -p ~/tmp
+TMP_DIR="$HOME/tmp"
+mkdir -p "$TMP_DIR"
 
 # install fd
-cd ~/tmp
+cd "$TMP_DIR"
 FD_VERSION="8.7.1"
-wget "https://github.com/sharkdp/fd/releases/download/v${FD_VERSION}/fd-musl_${FD_VERSION}_amd64.deb"
-sudo dpkg -i "fd-musl_${FD_VERSION}_amd64.deb"
+FD_DEB="fd-musl_${FD_VERSION}_amd64.deb"
+wget "https://github.com/sharkdp/fd/releases/download/v$FD_VERSION/$FD_DEB" -O "$FD_DEB"
+sudo dpkg -i "$FD_DEB"
 
 # install rg
-cd ~/tmp
+cd "$TMP_DIR"
 RG_VERSION="13.0.0"
-wget "https://github.com/BurntSushi/ripgrep/releases/download/${RG_VERSION}/ripgrep_${RG_VERSION}_amd64.deb"
-sudo dpkg -i "ripgrep_${RG_VERSION}_amd64.deb"
+RG_DEB="ripgrep_${RG_VERSION}_amd64.deb"
+wget "https://github.com/BurntSushi/ripgrep/releases/download/$RG_VERSION/$RG_DEB" -O "$RG_DEB"
+sudo dpkg -i "$RG_DEB"
 
 # install bat
-cd ~/tmp
+cd "$TMP_DIR"
 BAT_VERSION="0.24.0"
-wget "https://github.com/sharkdp/bat/releases/download/v${BAT_VERSION}/bat-musl_${BAT_VERSION}_amd64.deb"
-sudo dpkg -i "bat-musl_${BAT_VERSION}_amd64.deb"
+BAT_DEB="bat-musl_${BAT_VERSION}_amd64.deb"
+wget "https://github.com/sharkdp/bat/releases/download/v$BAT_VERSION/$BAT_DEB" -O "$BAT_DEB"
+sudo dpkg -i "$BAT_DEB"
 
 # install fish
-cd ~/tmp
+cd "$TMP_DIR"
 FISH_VERSION="3.6.1"
-wget "https://github.com/fish-shell/fish-shell/releases/download/${FISH_VERSION}/fish-${FISH_VERSION}.tar.xz"
-tar xf "fish-${FISH_VERSION}.tar.xz"
-cd "fish-${FISH_VERSION}"
-cmake .
+FISH_DIR="fish-$FISH_VERSION"
+FISH_TAR="$FISH_DIR.tar.xz"
+wget "https://github.com/fish-shell/fish-shell/releases/download/$FISH_VERSION/$FISH_TAR" -O "$FISH_TAR"
+tar xf "$FISH_TAR"
+cd "$FISH_DIR"
+cmake -D CMAKE_INSTALL_PREFIX=/usr .
 make
 sudo make install
 
 # set up environment variables
-fish -c <<EOF
+fish <<EOF
 set -Ux COLORTERM "truecolor"
 set -Ux BROWSER "w3m"
 set -Ux EDITOR "nvim"
@@ -109,25 +116,32 @@ set -U fish_pager_color_selected_background "-r"
 fish_add_path ~/.local/bin
 EOF
 
-sudo chsh -s "$(which fish)" "$USER"
-
-# install starship
-cd ~/tmp
-wget "https://starship.rs/install.sh" -O install-starship.sh
-chmod +x install-starship.sh
-./install-starship -y
+# sudo chsh -s /usr/bin/fish "$USER"
 
 # install tmux
-cd ~/tmp
+cd "$TMP_DIR"
 TMUX_VERSION="3.3a"
-wget "https://github.com/tmux/tmux/releases/download/${TMUX_VERSION}/tmux-${TMUX_VERSION}.tar.gz"
-tar xzf "tmux-${TMUX_VERSION}.tar.gz"
-cd "tmux-${TMUX_VERSION}"
+TMUX_DIR="tmux-$TMUX_VERSION"
+TMUX_TAR="$TMUX_DIR.tar.gz"
+wget "https://github.com/tmux/tmux/releases/download/$TMUX_VERSION/$TMUX_TAR" -O "$TMUX_TAR"
+tar xzf "$TMUX_TAR"
+cd "$TMUX_DIR"
 ./configure
 make
 sudo make install
 
-# install neovim
-cd ~/tmp
-wget "https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage" -O ~/.local/bin/nvim
-chmod u+x ~/.local/bin/nvim
+# install starship
+cd "$TMP_DIR"
+wget "https://starship.rs/install.sh" -O install-starship.sh
+chmod +x install-starship.sh
+./install-starship -y
+
+# install neovim (nightly build)
+cd "$TMP_DIR"
+NVIM_DIR="nvim-linux64"
+NVIM_TAR="$NVIM_DIR.tar.gz"
+wget "https://github.com/neovim/neovim/releases/download/nightly/$NVIM_TAR" -O "$NVIM_TAR"
+tar xzf "$NVIM_TAR"
+cd "$NVIM_DIR"
+sudo cp -r bin lib share /usr
+sudo cp -r man /usr/share
