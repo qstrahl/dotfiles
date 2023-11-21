@@ -117,8 +117,6 @@ set -U fish_pager_color_selected_background "-r"
 fish_add_path ~/.local/bin
 EOF
 
-# sudo chsh -s /usr/bin/fish "$USER"
-
 # install tmux
 cd "$TMP_DIR"
 TMUX_VERSION="3.3a"
