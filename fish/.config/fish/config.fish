@@ -21,5 +21,7 @@ if status is-interactive
   bind -M insert $cTab accept-autosuggestion
   bind -M insert $cEnter accept-autosuggestion and execute
 
+  fish_config theme choose mine
+
   starship init fish | source
 end
