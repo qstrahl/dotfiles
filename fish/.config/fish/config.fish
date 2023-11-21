@@ -16,10 +16,10 @@ if status is-interactive
   bind -M insert $cEnter accept-autosuggestion and execute
 
   # cursor shape
-  set fish_cursor_default block blink
-  set fish_cursor_insert line blink
-  set fish_cursor_replace_one underscore blink
-  set fish_cursor_visual block blink
+  set -g fish_cursor_default block blink
+  set -g fish_cursor_insert line blink
+  set -g fish_cursor_replace_one underscore blink
+  set -g fish_cursor_visual block blink
 
   fish_theme_mine
 
