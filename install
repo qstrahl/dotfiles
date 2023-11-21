@@ -42,9 +42,9 @@ sudo dpkg -i "bat-musl_${BAT_VERSION}_amd64.deb"
 # install fish
 cd ~/tmp
 FISH_VERSION="3.6.1"
-wget "https://github.com/fish-shell/fish-shell/releases/download/$FISH_VERSION/fish-$FISH_VERSION.tar.xz"
-tar xf "fish-$FISH_VERSION.tar.xz"
-cd "fish-$FISH_VERSION"
+wget "https://github.com/fish-shell/fish-shell/releases/download/${FISH_VERSION}/fish-${FISH_VERSION}.tar.xz"
+tar xf "fish-${FISH_VERSION}.tar.xz"
+cd "fish-${FISH_VERSION}"
 cmake .
 make
 sudo make install
