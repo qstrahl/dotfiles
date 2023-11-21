@@ -18,6 +18,11 @@ ln -Tfs ${PWD}/term/.config/bat ~/.config/bat
 ln -Tfs ${PWD}/term/.config/ripgreprc ~/.config/ripgreprc
 ln -Tfs ${PWD}/nvim/.config/nvim ~/.config/nvim
 
+# install build dependencies
+# - cmake required by fish
+# - libevent/ncurses required by tmux
+sudo apt install -y cmake libevent-dev libncurses-dev
+
 # make temporary build directory
 mkdir -p ~/tmp
 
