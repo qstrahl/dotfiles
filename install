@@ -1,0 +1,127 @@
+#!/bin/sh
+
+# ensure $USER is defined
+if [ -z "$USER" ]; then
+  USER="$(id -un)"
+fi
+
+# pull in submodules
+git submodule update --init
+
+# link dotfiles
+ln -s git/.config/git ~/.config/git
+ln -s fish/.config/fish ~/.config/fish
+ln -s starpship/.config/starship.toml ~/.config/starship.toml
+ln -s tmux/.config/tmux ~/.config/tmux
+ln -s extrakto/.config/extrakto.conf ~/.config/extrakto.conf
+ln -s term/.config/bat ~/.config/bat
+ln -s term/.config/ripgreprc ~/.config/ripgreprc
+ln -s nvim/.config/nvim ~/.config/nvim
+
+# make temporary build directory
+mkdir -p ~/tmp
+
+# install fd
+cd ~/tmp
+FD_VERSION="8.7.1"
+wget "https://github.com/sharkdp/fd/releases/download/v${FD_VERSION}/fd-musl_${FD_VERSION}_amd64.deb"
+sudo dpkg -i "fd-musl_${FD_VERSION}_amd64.deb"
+
+# install rg
+cd ~/tmp
+RG_VERSION="13.0.0"
+wget "https://github.com/BurntSushi/ripgrep/releases/download/${RG_VERSION}/ripgrep_${RG_VERSION}_amd64.deb"
+sudo dpkg -i "ripgrep_${RG_VERSION}_amd64.deb"
+
+# install bat
+cd ~/tmp
+BAT_VERSION="0.24.0"
+wget "https://github.com/sharkdp/bat/releases/download/v${BAT_VERSION}/bat-musl_${BAT_VERSION}_amd64.deb"
+sudo dpkg -i "bat-musl_${BAT_VERSION}_amd64.deb"
+
+# install fish
+cd ~/tmp
+FISH_VERSION="3.6.1"
+# wget "https://github.com/fish-shell/fish-shell/releases/download/$FISH_VERSION/fish-$FISH_VERSION.tar.xz"
+# tar xf "fish-$FISH_VERSION.tar.xz"
+# cd "fish-$FISH_VERSION"
+# cmake .
+# make
+# sudo make install
+wget "https://github.com/fish-shell/fish-shell/releases/download/${FISH_VERSION}/fish-${FISH_VERSION}.pkg"
+sudo dpkg -i "fish-${FISH_VERSION}.pkg"
+
+# set up environment variables
+fish -c <<EOF
+set -Ux COLORTERM "truecolor"
+set -Ux BROWSER "w3m"
+set -Ux EDITOR "nvim"
+set -Ux VISUAL "nvim"
+set -Ux PAGER "bat"
+set -Ux MANPAGER "sh -c 'col -bx | bat -l man'"
+set -Ux TERMINAL "xterm"
+set -Ux LESS "-F -g -i -M -Q -R -S -z-2 --mouse --no-histdups --rscroll=*n- --wheel-lines=1"
+set -Ux NODE_ENV "development"
+set -Ux FORGIT_FZF_DEFAULT_OPTS "--preview-window hidden"
+set -Ux FORGIT_LOG_FORMAT "%C(auto)%h%d %s %C(brightblack italic)%cr%Creset"
+set -Ux FZF_CTRL_T_COMMAND "fd -HIL -E .git -t f"
+set -Ux FZF_DEFAULT_COMMAND "fd -HIL -E .git -t f"
+set -Ux FZF_DEFAULT_OPTS "--inline-info --height 0 --preview 'fzf-preview {}' --preview-window=right:50%:hidden --bind 'ctrl-/:toggle-preview'"
+
+set -U fish_color_autosuggestion "brblack"
+set -U fish_color_cancel "-r"
+set -U fish_color_command "green"
+set -U fish_color_comment "brblack"
+set -U fish_color_cwd "brblue"
+set -U fish_color_cwd_root "red"
+set -U fish_color_end "brblack"
+set -U fish_color_error "red"
+set -U fish_color_escape "brmagenta"
+set -U fish_color_history_current "-o"
+set -U fish_color_host "normal"
+set -U fish_color_host_remote "yellow"
+set -U fish_color_match "brblack -o -b brgreen"
+set -U fish_color_normal "normal"
+set -U fish_color_operator "yellow"
+set -U fish_color_param "normal"
+set -U fish_color_quote "magenta"
+set -U fish_color_redirection "brblue -i"
+set -U fish_color_search_match "brblack -b bryellow"
+set -U fish_color_selection "-o brblack -b brgreen"
+set -U fish_color_status "red"
+set -U fish_color_user "brgreen"
+set -U fish_color_valid_path "-u"
+set -U fish_cursor_default "block blink"
+set -U fish_cursor_insert "line blink"
+set -U fish_cursor_visual "block blink"
+set -U fish_greeting ""
+set -U fish_key_bindings "fish_hybrid_key_bindings"
+set -U fish_pager_color_completion "normal"
+set -U fish_pager_color_description "yellow -d"
+set -U fish_pager_color_prefix "white -o"
+set -U fish_pager_color_progress "brwhite -b cyan"
+set -U fish_pager_color_selected_background "-r"
+
+fish_add_path ~/.local/bin
+EOF
+
+sudo chsh -s "$(which fish)" "$USER"
+
+# install starship
+cd ~/tmp
+curl -sS "https://starship.rs/install.sh" | sh
+
+# install tmux
+cd ~/tmp
+TMUX_VERSION="3.3a"
+wget "https://github.com/tmux/tmux/releases/download/${TMUX_VERSION}/tmux-${TMUX_VERSION}.tar.gz"
+tar xzf "tmux-${TMUX_VERSION}.tar.gz"
+cd "tmux-${TMUX_VERSION}"
+./configure
+make
+sudo make install
+
+# install neovim
+cd ~/tmp
+wget "https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage" -O ~/.local/bin/nvim
+chmod u+x ~/.local/bin/nvim
