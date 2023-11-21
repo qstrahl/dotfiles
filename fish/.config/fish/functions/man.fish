@@ -1,4 +1,8 @@
 # Defined in - @ line 1
 function man --wraps=batman --description 'alias man=batman'
-  batman  $argv;
+  if command -q batman
+    batman  $argv
+  else
+    command batman $argv
+  end
 end
