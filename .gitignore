@@ -1,5 +1,6 @@
 zsh/.config/zsh/.zcompdump
 zsh/.config/zsh/.zcompdump.zwc
 zsh/.config/zsh/.zhistory
+fish/.config/fish/fish_variables
 tmux/.config/tmux/plugins
 ^tmux/.config/tmux/plugins/tpm
