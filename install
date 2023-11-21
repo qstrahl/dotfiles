@@ -9,14 +9,14 @@ fi
 git submodule update --init
 
 # link dotfiles
-ln -s git/.config/git ~/.config/git
-ln -s fish/.config/fish ~/.config/fish
-ln -s starpship/.config/starship.toml ~/.config/starship.toml
-ln -s tmux/.config/tmux ~/.config/tmux
-ln -s extrakto/.config/extrakto.conf ~/.config/extrakto.conf
-ln -s term/.config/bat ~/.config/bat
-ln -s term/.config/ripgreprc ~/.config/ripgreprc
-ln -s nvim/.config/nvim ~/.config/nvim
+ln -s ${PWD}/git/.config/git ~/.config/git
+ln -s ${PWD}/fish/.config/fish ~/.config/fish
+ln -s ${PWD}/starpship/.config/starship.toml ~/.config/starship.toml
+ln -s ${PWD}/tmux/.config/tmux ~/.config/tmux
+ln -s ${PWD}/extrakto/.config/extrakto.conf ~/.config/extrakto.conf
+ln -s ${PWD}/term/.config/bat ~/.config/bat
+ln -s ${PWD}/term/.config/ripgreprc ~/.config/ripgreprc
+ln -s ${PWD}/nvim/.config/nvim ~/.config/nvim
 
 # make temporary build directory
 mkdir -p ~/tmp
