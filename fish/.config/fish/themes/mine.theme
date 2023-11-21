@@ -1,0 +1,31 @@
+fish_color_autosuggestion brblack
+fish_color_cancel -r
+fish_color_command green
+fish_color_comment brblack
+fish_color_cwd brblue
+fish_color_cwd_root red
+fish_color_end brblack
+fish_color_error red
+fish_color_escape brmagenta
+fish_color_history_current -o
+fish_color_host normal
+fish_color_host_remote yellow
+fish_color_match brblack -o -b brgreen
+fish_color_normal normal
+fish_color_operator yellow
+fish_color_param normal
+fish_color_quote magenta
+fish_color_redirection brblue -i
+fish_color_search_match brblack -b bryellow
+fish_color_selection -b 333
+fish_color_status red
+fish_color_user brgreen
+fish_color_valid_path -u
+fish_pager_color_prefix -o normal
+fish_pager_color_completion normal
+fish_pager_color_description yellow
+fish_pager_color_progress brwhite -b cyan
+fish_pager_color_selected_prefix -o white
+fish_pager_color_selected_completion white
+fish_pager_color_selected_description bryellow
+fish_pager_color_selected_background -b 333
