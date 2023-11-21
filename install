@@ -65,7 +65,7 @@ cmake -D CMAKE_INSTALL_PREFIX=/usr .
 make
 sudo make install
 
-# set up environment variables
+# set up fish environment
 fish <<EOF
 set -Ux COLORTERM "truecolor"
 set -Ux BROWSER "w3m"
