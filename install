@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # unminimize the codespace
 # (mild hack; unminimize requires 2 user confirmations, no un-interactive mode)
