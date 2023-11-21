@@ -9,6 +9,9 @@ if [ -z "$USER" ]; then
   USER="$(id -un)"
 fi
 
+# link workspace for convenience
+ln -Tfs "/workspaces/obsidian" ~/obsidian
+
 # pull in submodules
 git submodule update --init
 
