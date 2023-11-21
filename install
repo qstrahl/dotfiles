@@ -107,7 +107,9 @@ sudo chsh -s "$(which fish)" "$USER"
 
 # install starship
 cd ~/tmp
-curl -sS "https://starship.rs/install.sh" | sh
+wget "https://starship.rs/install.sh" -O install-starship.sh
+chmod +x install-starship.sh
+./install-starship -y
 
 # install tmux
 cd ~/tmp
