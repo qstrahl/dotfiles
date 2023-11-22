@@ -88,9 +88,12 @@ set -Ux FZF_CTRL_T_COMMAND "fd -HIL -E .git -t f"
 set -Ux FZF_DEFAULT_COMMAND "fd -HIL -E .git -t f"
 set -Ux FZF_DEFAULT_OPTS "--inline-info --height 0 --preview 'fzf-preview {}' --preview-window=right:50%:hidden --bind 'ctrl-/:toggle-preview'"
 
-set fish_key_bindings fish_hybrid_key_bindings
+set -U fish_key_bindings fish_hybrid_key_bindings
+set -U fish_greeting ""
 fish_add_path ~/.local/bin
 EOF
+
+sudo chsh -s /usr/bin/fish "$USER"
 
 # install tmux
 cd "$TMP_DIR"
