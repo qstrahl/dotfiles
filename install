@@ -13,7 +13,7 @@ fi
 ln -Tfs "/workspaces/obsidian" ~/obsidian
 
 # pull in submodules
-git submodule update --init
+git submodule update --init --recursive
 
 # link dotfiles
 ln -Tfs "$PWD" ~/dotfiles
