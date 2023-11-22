@@ -111,7 +111,7 @@ sudo make install
 cd "$TMP_DIR"
 wget "https://starship.rs/install.sh" -O install-starship.sh
 chmod +x install-starship.sh
-./install-starship -y
+sudo ./install-starship -y
 
 # install neovim (nightly build)
 cd "$TMP_DIR"
