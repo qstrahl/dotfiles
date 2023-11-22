@@ -13,7 +13,8 @@ if status is-interactive
   bind -M default -M insert \cj history-search-forward
   bind -M default -M insert \ck history-search-backward
   bind -M insert $cTab accept-autosuggestion
-  bind -M insert $cEnter accept-autosuggestion and execute
+  bind -M insert $sEnter accept-autosuggestion
+  bind -M insert $cEnter accept-autosuggestion
 
   # cursor shape
   set -g fish_cursor_default block blink
