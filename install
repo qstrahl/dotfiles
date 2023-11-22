@@ -107,6 +107,9 @@ cd "$TMUX_DIR"
 make
 sudo make install
 
+# install tmux plugins
+tmux new ~/.config/tmux/plugins/tpm/bindings/install_plugins
+
 # install starship
 cd "$TMP_DIR"
 wget "https://starship.rs/install.sh" -O install-starship.sh
