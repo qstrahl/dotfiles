@@ -125,3 +125,6 @@ tar xzf "$NVIM_TAR"
 cd "$NVIM_DIR"
 sudo cp -r bin lib share /usr
 sudo cp -r man /usr/share
+
+# install nvim plugins
+nvim +PlugInstall +qa
