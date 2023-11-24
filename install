@@ -73,6 +73,7 @@ sudo make install
 # set up fish environment
 fish <<EOF
 set -Ux GITHUB_TOKEN "$GITHUB_TOKEN"
+set -Ux GITHUB_USER "$GITHUB_USER"
 
 set -Ux COLORTERM "truecolor"
 set -Ux BROWSER "w3m"
