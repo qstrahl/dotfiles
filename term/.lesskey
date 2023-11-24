@@ -1,0 +1,10 @@
+#command
+\e\e quit
+#env
+LESS = -F -g -i -M -Q -R -S -z-2 --mouse --no-histdups --rscroll=*n- --wheel-lines=1
+#line-edit
+\e\e abort
+^d abort
+^@ insert \ 
+\e[32;2u insert \ 
+\e[32;6u insert \ 
