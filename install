@@ -24,6 +24,7 @@ ln -Tfs "$PWD/tmux/.config/tmux" ~/.config/tmux
 ln -Tfs "$PWD/extrakto/.config/extrakto" ~/.config/extrakto
 ln -Tfs "$PWD/term/.config/bat" ~/.config/bat
 ln -Tfs "$PWD/term/.config/ripgreprc" ~/.config/ripgreprc
+ln -Tfs "$PWD/term/.lesskey" ~/.lesskey
 ln -Tfs "$PWD/term/.terminfo" ~/.terminfo
 ln -Tfs "$PWD/nvim/.config/nvim" ~/.config/nvim
 
