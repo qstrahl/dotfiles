@@ -88,6 +88,9 @@
 	rba = rebase --abort
 	rbe = rebase --edit-todo
 
+	; "submodule" takes too long to type
+	sm = submodule
+
 	; list files sorted by edit rate TODO: make this a shell script
 	; hotspots = "!for file in `git ls-files`; do echo `git log --oneline --follow -- $file | wc -l` $file; done | sort -n"
 
