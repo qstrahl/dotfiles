@@ -18,6 +18,7 @@ git submodule update --init --recursive
 # link dotfiles
 ln -Tfs "$PWD" ~/dotfiles
 ln -Tfs "$PWD/git/.config/git" ~/.config/git
+ln -Tfs "$PWD/vanta/.config/git/config.local" ~/.config/git/config.local
 ln -Tfs "$PWD/fish/.config/fish" ~/.config/fish
 ln -Tfs "$PWD/starship/.config/starship.toml" ~/.config/starship.toml
 ln -Tfs "$PWD/tmux/.config/tmux" ~/.config/tmux

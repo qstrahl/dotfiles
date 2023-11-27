@@ -1,0 +1,3 @@
+; vim: ft=gitconfig
+[user]
+	email = quinn.strahl@vanta.com
