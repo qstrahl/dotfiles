@@ -116,7 +116,7 @@ make
 sudo make install
 
 # install tmux plugins
-tmux new ~/.config/tmux/plugins/tpm/bindings/install_plugins
+~/.config/tmux/plugins/tpm/bin/install_plugins
 
 # install starship
 cd "$TMP_DIR"
