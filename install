@@ -59,6 +59,14 @@ BAT_DEB="bat-musl_${BAT_VERSION}_amd64.deb"
 wget "https://github.com/sharkdp/bat/releases/download/v$BAT_VERSION/$BAT_DEB" -O "$BAT_DEB"
 sudo dpkg -i "$BAT_DEB"
 
+# install fzf
+cd "$TMP_DIR"
+FZF_VERSION="0.44.1"
+FZF_TAR="fzf-${FISH_VERSION}-linux_amd64.tar.gz"
+wget "https://github.com/junegunn/fzf/releases/download/$FZF_VERSION/$FZF_TAR" -O "$FZF_TAR"
+tar xzf "$FZF_TAR"
+mv ./fzf ~/.local/bin
+
 # install fish
 cd "$TMP_DIR"
 FISH_VERSION="3.6.1"
@@ -81,6 +89,12 @@ set -Ux PAGER "bat"
 set -Ux MANPAGER "sh -c 'col -bx | bat -l man'"
 set -Ux LS_COLORS "rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=01;34:st=37;44:ex=01;32"
 set -Ux NODE_ENV "development"
+
+set -Ux FZF_DEFAULT_COMMAND "fd -HI --exclude .git -t f -t f"
+set -Ux FZF_DEFAULT_OPTS "--inline-info --height 0 --preview 'fzf-preview {}' --preview-window=right:50%:hidden --bind 'ctrl-/:toggle-preview'"
+set -Ux FZF_CTRL_T_COMMAND "fd -HIL -E .git -t f"
+set -Ux FZF_CTRL_T_OPTS "--preview 'bat {}'"
+set -Ux FZF_ALT_C_COMMAND "fd -HI --exclude .git -t f -t d"
 
 set -U fish_key_bindings fish_hybrid_key_bindings
 set -U fish_greeting ""
