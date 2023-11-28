@@ -62,7 +62,7 @@ sudo dpkg -i "$BAT_DEB"
 # install fzf
 cd "$TMP_DIR"
 FZF_VERSION="0.44.1"
-FZF_TAR="fzf-${FISH_VERSION}-linux_amd64.tar.gz"
+FZF_TAR="fzf-${FZF_VERSION}-linux_amd64.tar.gz"
 wget "https://github.com/junegunn/fzf/releases/download/$FZF_VERSION/$FZF_TAR" -O "$FZF_TAR"
 tar xzf "$FZF_TAR"
 mv ./fzf ~/.local/bin
