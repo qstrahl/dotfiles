@@ -59,6 +59,13 @@ BAT_DEB="bat-musl_${BAT_VERSION}_amd64.deb"
 wget "https://github.com/sharkdp/bat/releases/download/v$BAT_VERSION/$BAT_DEB" -O "$BAT_DEB"
 sudo dpkg -i "$BAT_DEB"
 
+# install delta
+cd "$TMP_DIR"
+DELTA_VERSION="0.16.5"
+DELTA_DEB="git-delta-musl_${DELTA_VERSION}_amd64.deb"
+wget "https://github.com/dandavison/delta/releases/download/$DELTA_VERSION/$DELTA_DEB" -O "$DELTA_DEB"
+sudo dpkg -i "$DELTA_DEB"
+
 # install fzf
 cd "$TMP_DIR"
 FZF_VERSION="0.44.1"
