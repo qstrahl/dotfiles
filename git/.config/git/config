@@ -1,11 +1,17 @@
 ; vim: tabstop=8 noexpandtab shiftwidth=8 softtabstop=8
 [core]
 	excludesfile = ~/.gitignore
-	pager = bat
+	pager = delta
 [delta]
-	; delta options here
+	features = decorations side-by-side
+	line-numbers-left-format = "{nm:^4}"
+	line-numbers-right-format = "{np:^4}"
+[delta "decorations"]
+	hunk-header-style = omit
+[delta "interactive"]
+	keep-plus-minus-markers = false
 [interactive]
-	diffFilter = git-delta --color-only
+	diffFilter = delta --color-only --features=interactive
 [user]
 	email = qstrahl@gmail.com
 	name = Quinn Strahl
