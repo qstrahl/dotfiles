@@ -139,7 +139,6 @@ wget "https://github.com/neovim/neovim/releases/download/nightly/$NVIM_TAR" -O "
 tar xzf "$NVIM_TAR"
 cd "$NVIM_DIR"
 sudo cp -r bin lib share /usr
-sudo cp -r man /usr/share
 
 # do an initial run of nvim to bootstrap stuff
 nvim +qa
