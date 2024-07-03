@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# unminimize the codespace
-# (mild hack; unminimize requires 2 user confirmations, no un-interactive mode)
-sudo unminimize < <(echo 'y'; sleep 1; echo 'y')
+# unminimize the codespace, answer affirmatively to every prompt
+# (unminimize lacks a non-interactive flag, sad)
+yes | sudo unminimize
 
 # ensure $USER is defined
 if [ -z "$USER" ]; then
