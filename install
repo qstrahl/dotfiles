@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# ran into issues with xterm-new
+export TERM="xterm"
+
 # unminimize the codespace, answer affirmatively to every prompt
 # (unminimize lacks a non-interactive flag, sad)
 yes | sudo unminimize
