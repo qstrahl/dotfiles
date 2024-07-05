@@ -111,7 +111,7 @@ set -U fish_greeting ""
 fish_add_path ~/.local/bin
 EOF
 
-sudo chsh -s /usr/bin/fish "$USER"
+# sudo chsh -s /usr/bin/fish "$USER"
 
 # install tmux
 cd "$TMP_DIR"
