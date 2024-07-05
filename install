@@ -43,14 +43,14 @@ mkdir -p "$TMP_DIR"
 
 # install fd
 cd "$TMP_DIR"
-FD_VERSION="8.7.1"
+FD_VERSION="10.1.0"
 FD_DEB="fd-musl_${FD_VERSION}_amd64.deb"
 wget "https://github.com/sharkdp/fd/releases/download/v$FD_VERSION/$FD_DEB" -O "$FD_DEB"
 sudo dpkg -i "$FD_DEB"
 
 # install rg
 cd "$TMP_DIR"
-RG_VERSION="13.0.0"
+RG_VERSION="14.1.0"
 RG_DEB="ripgrep_${RG_VERSION}_amd64.deb"
 wget "https://github.com/BurntSushi/ripgrep/releases/download/$RG_VERSION/$RG_DEB" -O "$RG_DEB"
 sudo dpkg -i "$RG_DEB"
@@ -64,14 +64,14 @@ sudo dpkg -i "$BAT_DEB"
 
 # install delta
 cd "$TMP_DIR"
-DELTA_VERSION="0.16.5"
+DELTA_VERSION="0.17.0"
 DELTA_DEB="git-delta-musl_${DELTA_VERSION}_amd64.deb"
 wget "https://github.com/dandavison/delta/releases/download/$DELTA_VERSION/$DELTA_DEB" -O "$DELTA_DEB"
 sudo dpkg -i "$DELTA_DEB"
 
 # install fzf
 cd "$TMP_DIR"
-FZF_VERSION="0.44.1"
+FZF_VERSION="0.53.0"
 FZF_TAR="fzf-${FZF_VERSION}-linux_amd64.tar.gz"
 wget "https://github.com/junegunn/fzf/releases/download/$FZF_VERSION/$FZF_TAR" -O "$FZF_TAR"
 tar xzf "$FZF_TAR"
@@ -79,7 +79,7 @@ mv ./fzf ~/.local/bin
 
 # install fish
 cd "$TMP_DIR"
-FISH_VERSION="3.6.1"
+FISH_VERSION="3.7.1"
 FISH_DIR="fish-$FISH_VERSION"
 FISH_TAR="$FISH_DIR.tar.xz"
 wget "https://github.com/fish-shell/fish-shell/releases/download/$FISH_VERSION/$FISH_TAR" -O "$FISH_TAR"
@@ -115,7 +115,7 @@ sudo chsh -s /usr/bin/fish "$USER"
 
 # install tmux
 cd "$TMP_DIR"
-TMUX_VERSION="3.3a"
+TMUX_VERSION="3.4"
 TMUX_DIR="tmux-$TMUX_VERSION"
 TMUX_TAR="$TMUX_DIR.tar.gz"
 wget "https://github.com/tmux/tmux/releases/download/$TMUX_VERSION/$TMUX_TAR" -O "$TMUX_TAR"
