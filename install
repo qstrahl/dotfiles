@@ -53,8 +53,8 @@ sudo dpkg -i "$FD_DEB"
 
 # install rg
 cd "$TMP_DIR"
-RG_VERSION="14.1.0"
-RG_DEB="ripgrep_${RG_VERSION}_amd64.deb"
+RG_VERSION="14.1.1"
+RG_DEB="ripgrep_${RG_VERSION}-1_amd64.deb"
 wget "https://github.com/BurntSushi/ripgrep/releases/download/$RG_VERSION/$RG_DEB" -O "$RG_DEB"
 sudo dpkg -i "$RG_DEB"
 
