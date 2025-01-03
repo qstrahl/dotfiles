@@ -37,6 +37,7 @@ ln -Tfs "$PWD/nvim/.config/nvim" ~/.config/nvim
 # install build dependencies
 # - cmake required by fish
 # - libevent/ncurses required by tmux
+sudo apt update
 sudo apt install -y cmake libevent-dev libncurses-dev
 
 # make temporary build directory
