@@ -1,7 +1,5 @@
 #!/bin/bash
 
-exit
-
 # ran into issues with xterm-new
 export TERM="xterm"
 
