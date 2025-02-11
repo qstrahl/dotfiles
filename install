@@ -137,7 +137,7 @@ chmod +x install-starship.sh
 
 # install neovim (nightly build)
 cd "$TMP_DIR"
-NVIM_DIR="nvim-linux64"
+NVIM_DIR="nvim-linux-x86_64"
 NVIM_TAR="$NVIM_DIR.tar.gz"
 wget "https://github.com/neovim/neovim/releases/download/nightly/$NVIM_TAR" -O "$NVIM_TAR"
 tar xzf "$NVIM_TAR"
