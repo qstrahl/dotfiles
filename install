@@ -63,6 +63,13 @@ BAT_DEB="bat-musl_${BAT_VERSION}_amd64.deb"
 wget "https://github.com/sharkdp/bat/releases/download/v$BAT_VERSION/$BAT_DEB" -O "$BAT_DEB"
 sudo dpkg -i "$BAT_DEB"
 
+# install bat-extras
+cd "$TMP_DIR"
+BAT_EXTRAS_VERSION="2024.08.24"
+BAT_EXTRAS_ZIP="bat-extras-$BAT_EXTRAS_VERSION.zip"
+wget "https://github.com/eth-p/bat-extras/releases/download/v$BAT_EXTRAS_VERSION/$BAT_EXTRAS_ZIP" -O "$BAT_EXTRAS_ZIP"
+unzip "$BAT_EXTRAS_ZIP" "bin/*" -d ~/.local
+
 # install delta
 cd "$TMP_DIR"
 DELTA_VERSION="0.17.0"
