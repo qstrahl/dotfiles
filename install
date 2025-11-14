@@ -135,6 +135,9 @@ sudo chsh -s /usr/bin/fish "$USER"
 # make
 # sudo make install
 
+# install tmux plugins
+# ~/.config/tmux/plugins/tpm/bin/install_plugins
+
 # install zellij
 https://github.com/zellij-org/zellij/releases/download/v0.43.1/zellij-aarch64-unknown-linux-musl.tar.gz
 cd "$TMP_DIR"
@@ -144,9 +147,6 @@ wget "https://github.com/zellij/zellij/releases/download/v$ZELLIJ_VERSION/$ZELLI
 tar xzf "$ZELLIJ_TAR"
 chmod +x ./zellij
 cp zelilj ~/.local/bin
-
-# install tmux plugins
-~/.config/tmux/plugins/tpm/bin/install_plugins
 
 # install starship
 cd "$TMP_DIR"
