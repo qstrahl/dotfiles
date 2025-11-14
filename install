@@ -34,10 +34,11 @@ ln -Tfs "$PWD/term/.terminfo" ~/.terminfo
 ln -Tfs "$PWD/nvim/.config/nvim" ~/.config/nvim
 
 # install build dependencies
-# - cmake required by fish
+# - cmake/ncurses required by fish
 # - libevent/ncurses/yacc required by tmux
-sudo apt update
-sudo apt install -y cmake
+# - timg useful image viewer for terminals
+# sudo apt update
+# sudo apt install -y cmake timg
 
 # make temporary build directory
 TMP_DIR="$HOME/tmp"
@@ -87,16 +88,17 @@ tar xzf "$FZF_TAR"
 mv ./fzf ~/.local/bin
 
 # install fish
-cd "$TMP_DIR"
-FISH_VERSION="3.7.1"
-FISH_DIR="fish-$FISH_VERSION"
-FISH_TAR="$FISH_DIR.tar.xz"
-wget "https://github.com/fish-shell/fish-shell/releases/download/$FISH_VERSION/$FISH_TAR" -O "$FISH_TAR"
-tar xf "$FISH_TAR"
-cd "$FISH_DIR"
-cmake -D CMAKE_INSTALL_PREFIX=/usr .
-make
-sudo make install
+# cd "$TMP_DIR"
+# FISH_VERSION="4.2.1"
+# FISH_DIR="fish-$FISH_VERSION"
+# FISH_TAR="$FISH_DIR.tar.xz"
+# wget "https://github.com/fish-shell/fish-shell/releases/download/$FISH_VERSION/$FISH_TAR" -O "$FISH_TAR"
+# tar xf "$FISH_TAR"
+# cd "$FISH_DIR"
+# cmake .
+# make
+# sudo make install
+sudo apt install -y fish
 
 # set up fish environment
 fish <<EOF
@@ -139,14 +141,13 @@ EOF
 # ~/.config/tmux/plugins/tpm/bin/install_plugins
 
 # install zellij
-https://github.com/zellij-org/zellij/releases/download/v0.43.1/zellij-aarch64-unknown-linux-musl.tar.gz
 cd "$TMP_DIR"
 ZELLIJ_VERSION="0.43.1"
 ZELLIJ_TAR="zellij-aarch64-unknown-linux-musl.tar.gz"
-wget "https://github.com/zellij/zellij/releases/download/v$ZELLIJ_VERSION/$ZELLIJ_TAR" -O "$ZELLIJ_TAR"
+wget "https://github.com/zellij-org/zellij/releases/download/v$ZELLIJ_VERSION/$ZELLIJ_TAR" -O "$ZELLIJ_TAR"
 tar xzf "$ZELLIJ_TAR"
 chmod +x ./zellij
-cp zelilj ~/.local/bin
+cp zellij ~/.local/bin
 
 # install starship
 cd "$TMP_DIR"
