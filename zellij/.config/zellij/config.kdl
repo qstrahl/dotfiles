@@ -310,7 +310,7 @@ themes {
             background 8
             emphasis_0 9
             emphasis_1 6
-            emphasis_2 2
+            emphasis_2 10
             emphasis_3 5
         }
         ribbon_unselected {
@@ -330,11 +330,11 @@ themes {
             emphasis_3 0
         }
         table_title {
-            base 15
+            base 10
             background 0
             emphasis_0 9
             emphasis_1 6
-            emphasis_2 15
+            emphasis_2 10
             emphasis_3 5
         }
         table_cell_unselected {
@@ -342,7 +342,7 @@ themes {
             background 0
             emphasis_0 9
             emphasis_1 6
-            emphasis_2 15
+            emphasis_2 10
             emphasis_3 5
         }
         table_cell_selected {
@@ -350,7 +350,7 @@ themes {
             background 8
             emphasis_0 9
             emphasis_1 6
-            emphasis_2 15
+            emphasis_2 10
             emphasis_3 5
         }
         list_unselected {
@@ -358,7 +358,7 @@ themes {
             background 0
             emphasis_0 9
             emphasis_1 6
-            emphasis_2 15
+            emphasis_2 10
             emphasis_3 5
         }
         list_selected {
@@ -366,27 +366,35 @@ themes {
             background 8
             emphasis_0 9
             emphasis_1 6
-            emphasis_2 15
+            emphasis_2 10
             emphasis_3 5
         }
-        frame_selected {
-            base 15
+        frame_unselected {
+            base 8
             background 0
-            emphasis_0 9
-            emphasis_1 6
-            emphasis_2 5
+            emphasis_0 0
+            emphasis_1 0
+            emphasis_2 0
+            emphasis_3 0
+        }
+        frame_selected {
+            base 10
+            background 0
+            emphasis_0 0
+            emphasis_1 0
+            emphasis_2 0
             emphasis_3 0
         }
         frame_highlight {
-            base 9
+            base 8
             background 0
-            emphasis_0 5
-            emphasis_1 9
-            emphasis_2 9
-            emphasis_3 9
+            emphasis_0 0
+            emphasis_1 0
+            emphasis_2 0
+            emphasis_3 0
         }
         exit_code_success {
-            base 15
+            base 10
             background 0
             emphasis_0 6
             emphasis_1 0
