@@ -30,7 +30,7 @@ ln -Tfs "$PWD/extrakto/.config/extrakto" ~/.config/extrakto
 ln -Tfs "$PWD/term/.config/bat" ~/.config/bat
 ln -Tfs "$PWD/term/.config/ripgreprc" ~/.config/ripgreprc
 ln -Tfs "$PWD/term/.lesskey" ~/.lesskey
-# ln -Tfs "$PWD/term/.terminfo" ~/.terminfo
+ln -Tfs "$PWD/term/.terminfo" ~/.terminfo
 ln -Tfs "$PWD/nvim/.config/nvim" ~/.config/nvim
 
 # install build dependencies
@@ -121,7 +121,7 @@ fish_add_path ~/.local/bin
 fish_add_path ~/obsidian/.venv/bin
 EOF
 
-sudo chsh -s /usr/bin/fish "$USER"
+# sudo chsh -s /usr/bin/fish "$USER"
 
 # install tmux
 # cd "$TMP_DIR"
