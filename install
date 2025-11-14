@@ -142,8 +142,8 @@ EOF
 
 # install zellij
 cd "$TMP_DIR"
-ZELLIJ_VERSION="0.43.1"
-ZELLIJ_TAR="zellij-aarch64-unknown-linux-musl.tar.gz"
+ZELLIJ_VERSION="0.43.0"
+ZELLIJ_TAR="zellij-x86_64-unknown-linux-musl.tar.gz"
 wget "https://github.com/zellij-org/zellij/releases/download/v$ZELLIJ_VERSION/$ZELLIJ_TAR" -O "$ZELLIJ_TAR"
 tar xzf "$ZELLIJ_TAR"
 chmod +x ./zellij
