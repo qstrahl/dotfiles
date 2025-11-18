@@ -74,6 +74,7 @@ bindings = [
   { key = "Enter", mods = "Alt|Shift", chars = "\u001b[13;4u"},
   { key = "[", mods = "Alt|Shift", chars = "\u001b[91;4u"},
   { key = "]", mods = "Alt|Shift", chars = "\u001b[93;4u"},
+  { key = "-", mods = "Control", chars = "\u001b[45;5u"},
 ]
 
 # [[keyboard.bindings]]
