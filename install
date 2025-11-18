@@ -24,8 +24,8 @@ ln -Tfs "$PWD/git/.config/git" ~/.config/git
 ln -Tfs "$PWD/vanta/.config/git/config.local" ~/.config/git/config.local
 ln -Tfs "$PWD/fish/.config/fish" ~/.config/fish
 ln -Tfs "$PWD/starship/.config/starship.toml" ~/.config/starship.toml
-# ln -Tfs "$PWD/tmux/.config/tmux" ~/.config/tmux
-ln -Tfs "$PWD/zellij/.config/zellij" ~/.config/zellij
+ln -Tfs "$PWD/tmux/.config/tmux" ~/.config/tmux
+# ln -Tfs "$PWD/zellij/.config/zellij" ~/.config/zellij
 ln -Tfs "$PWD/extrakto/.config/extrakto" ~/.config/extrakto
 ln -Tfs "$PWD/term/.config/bat" ~/.config/bat
 ln -Tfs "$PWD/term/.config/ripgreprc" ~/.config/ripgreprc
@@ -37,8 +37,9 @@ ln -Tfs "$PWD/nvim/.config/nvim" ~/.config/nvim
 # - cmake/ncurses required by fish
 # - libevent/ncurses/yacc required by tmux
 # - timg useful image viewer for terminals
-# sudo apt update
-# sudo apt install -y cmake timg
+sudo apt update
+sudo apt install -y cmake libevent-dev libncurses-dev yacc
+# sudo apt install -y timg
 
 # make temporary build directory
 TMP_DIR="$HOME/tmp"
@@ -123,31 +124,31 @@ fish_add_path ~/.local/bin
 fish_add_path ~/obsidian/.venv/bin
 EOF
 
-# sudo chsh -s /usr/bin/fish "$USER"
+sudo chsh -s /usr/bin/fish "$USER"
 
 # install tmux
-# cd "$TMP_DIR"
-# TMUX_VERSION="3.4"
-# TMUX_DIR="tmux-$TMUX_VERSION"
-# TMUX_TAR="$TMUX_DIR.tar.gz"
-# wget "https://github.com/tmux/tmux/releases/download/$TMUX_VERSION/$TMUX_TAR" -O "$TMUX_TAR"
-# tar xzf "$TMUX_TAR"
-# cd "$TMUX_DIR"
-# ./configure
-# make
-# sudo make install
+cd "$TMP_DIR"
+TMUX_VERSION="3.5a"
+TMUX_DIR="tmux-$TMUX_VERSION"
+TMUX_TAR="$TMUX_DIR.tar.gz"
+wget "https://github.com/tmux/tmux/releases/download/$TMUX_VERSION/$TMUX_TAR" -O "$TMUX_TAR"
+tar xzf "$TMUX_TAR"
+cd "$TMUX_DIR"
+./configure
+make
+sudo make install
 
 # install tmux plugins
-# ~/.config/tmux/plugins/tpm/bin/install_plugins
+~/.config/tmux/plugins/tpm/bin/install_plugins
 
 # install zellij
-cd "$TMP_DIR"
-ZELLIJ_VERSION="0.43.0"
-ZELLIJ_TAR="zellij-x86_64-unknown-linux-musl.tar.gz"
-wget "https://github.com/zellij-org/zellij/releases/download/v$ZELLIJ_VERSION/$ZELLIJ_TAR" -O "$ZELLIJ_TAR"
-tar xzf "$ZELLIJ_TAR"
-chmod +x ./zellij
-cp zellij ~/.local/bin
+# cd "$TMP_DIR"
+# ZELLIJ_VERSION="0.43.0"
+# ZELLIJ_TAR="zellij-x86_64-unknown-linux-musl.tar.gz"
+# wget "https://github.com/zellij-org/zellij/releases/download/v$ZELLIJ_VERSION/$ZELLIJ_TAR" -O "$ZELLIJ_TAR"
+# tar xzf "$ZELLIJ_TAR"
+# chmod +x ./zellij
+# cp zellij ~/.local/bin
 
 # install starship
 cd "$TMP_DIR"
