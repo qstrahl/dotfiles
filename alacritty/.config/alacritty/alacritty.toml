@@ -1,0 +1,292 @@
+[colors.bright]
+black = "0x798079"
+blue = "0xced4f2"
+cyan = "0xceecf2"
+green = "0xe0f2ce"
+magenta = "0xf2cee0"
+red = "0xf2d4ce"
+white = "0xf0fcf0"
+yellow = "0xf2ecce"
+
+[colors.normal]
+black = "0x0c0d0c"
+blue = "0xa3acd9"
+cyan = "0xa3d0d9"
+green = "0xbed9a3"
+magenta = "0xd9a3be"
+red = "0xd9aca3"
+white = "0xced9ce"
+yellow = "0xd9d0a3"
+
+[colors.primary]
+background = "0x1a1a1a"
+foreground = "0xb6bfb6"
+
+[cursor]
+blink_interval = 500
+blink_timeout = 0
+
+[cursor.style]
+blinking = "Always"
+shape = "Block"
+
+[font]
+size = 14
+
+[font.normal]
+family = "Hack Nerd Font"
+
+[general]
+live_config_reload = true
+
+[terminal]
+osc52 = "CopyPaste"
+
+[env]
+# TERM = "xterm-new"
+
+[mouse]
+hide_when_typing = true
+
+[scrolling]
+history = 0
+
+[terminal.shell]
+args = ["-l"]
+program = "/opt/homebrew/bin/fish"
+
+[window]
+option_as_alt = "Both"
+
+[window.dimensions]
+columns = 160
+lines = 50
+
+[keyboard]
+bindings = [
+  # kitty keyboard protocol corrections
+  { key = "Escape", mods = "Shift", chars = "\u001b[27;2u"},
+  { key = "Escape", mods = "Alt|Shift", chars = "\u001b[27;4u"},
+  { key = "Escape", mods = "Control", chars = "\u001b[27;5u"},
+  { key = "Escape", mods = "Control|Shift", chars = "\u001b[27;6u"},
+  { key = "Escape", mods = "Alt|Control", chars = "\u001b[27;7u"},
+  { key = "Escape", mods = "Alt|Control|Shift", chars = "\u001b[27;8u"},
+  { key = "Enter", mods = "Alt|Shift", chars = "\u001b[13;4u"},
+  { key = "[", mods = "Alt|Shift", chars = "\u001b[91;4u"},
+  { key = "]", mods = "Alt|Shift", chars = "\u001b[93;4u"},
+]
+
+# [[keyboard.bindings]]
+# action = "DecreaseFontSize"
+# key = "Minus"
+# mods = "Control|Shift"
+#
+# [[keyboard.bindings]]
+# action = "IncreaseFontSize"
+# key = "Equals"
+# mods = "Control|Shift"
+#
+# [[keyboard.bindings]]
+# chars = "\u001B[48;5u"
+# key = "Key0"
+# mods = "Control"
+#
+# [[keyboard.bindings]]
+# chars = "\u001B[49;5u"
+# key = "Key1"
+# mods = "Control"
+#
+# [[keyboard.bindings]]
+# chars = "\u001B[50;5u"
+# key = "Key2"
+# mods = "Control"
+#
+# [[keyboard.bindings]]
+# chars = "\u001B[51;5u"
+# key = "Key3"
+# mods = "Control"
+#
+# [[keyboard.bindings]]
+# chars = "\u001B[52;5u"
+# key = "Key4"
+# mods = "Control"
+#
+# [[keyboard.bindings]]
+# chars = "\u001B[53;5u"
+# key = "Key5"
+# mods = "Control"
+#
+# [[keyboard.bindings]]
+# chars = "\u001B[54;5u"
+# key = "Key6"
+# mods = "Control"
+#
+# [[keyboard.bindings]]
+# chars = "\u001B[55;5u"
+# key = "Key7"
+# mods = "Control"
+#
+# [[keyboard.bindings]]
+# chars = "\u001B[56;5u"
+# key = "Key8"
+# mods = "Control"
+#
+# [[keyboard.bindings]]
+# chars = "\u001B[57;5u"
+# key = "Key9"
+# mods = "Control"
+#
+# [[keyboard.bindings]]
+# chars = "\u001B[45;5u"
+# key = "Minus"
+# mods = "Control"
+#
+# [[keyboard.bindings]]
+# chars = "\u001B[61;5u"
+# key = "Equals"
+# mods = "Control"
+#
+# [[keyboard.bindings]]
+# chars = "\u001B[47;5u"
+# key = "Slash"
+# mods = "Control"
+#
+# [[keyboard.bindings]]
+# chars = "\u001B[47;6u"
+# key = "Slash"
+# mods = "Control|Shift"
+#
+# [[keyboard.bindings]]
+# chars = "\u001B[92;6u"
+# key = "Backslash"
+# mods = "Control|Shift"
+#
+# [[keyboard.bindings]]
+# chars = "\u001B[9;5u"
+# key = "Tab"
+# mods = "Control"
+#
+# [[keyboard.bindings]]
+# chars = "\u001B[1;5Z"
+# key = "Tab"
+# mods = "Control|Shift"
+#
+# [[keyboard.bindings]]
+# chars = "\u001B[13;2u"
+# key = "Return"
+# mods = "Shift"
+#
+# [[keyboard.bindings]]
+# chars = "\u001B[13;5u"
+# key = "Return"
+# mods = "Control"
+#
+# [[keyboard.bindings]]
+# chars = "\u001B[13;6u"
+# key = "Return"
+# mods = "Control|Shift"
+#
+# [[keyboard.bindings]]
+# chars = "\u001B\u001B[13;2u"
+# key = "Return"
+# mods = "Alt|Shift"
+#
+# [[keyboard.bindings]]
+# chars = "\u001B[127;2u"
+# key = "Back"
+# mods = "Shift"
+#
+# [[keyboard.bindings]]
+# chars = "\u001B[127;5u"
+# key = "Back"
+# mods = "Control"
+#
+# [[keyboard.bindings]]
+# chars = "\u001B[127;6u"
+# key = "Back"
+# mods = "Control|Shift"
+#
+# [[keyboard.bindings]]
+# chars = "\u001B[27;2u"
+# key = "Escape"
+# mods = "Shift"
+#
+# [[keyboard.bindings]]
+# chars = "\u001B[27;5u"
+# key = "Escape"
+# mods = "Control"
+#
+# [[keyboard.bindings]]
+# chars = "\u001B[27;6u"
+# key = "Escape"
+# mods = "Control|Shift"
+#
+# [[keyboard.bindings]]
+# chars = "\u001B[32;2u"
+# key = "Space"
+# mods = "Shift"
+#
+# [[keyboard.bindings]]
+# chars = "\u001B[32;5u"
+# key = "Space"
+# mods = "Control"
+#
+# [[keyboard.bindings]]
+# chars = "\u001B[32;6u"
+# key = "Space"
+# mods = "Control|Shift"
+#
+# [[keyboard.bindings]]
+# chars = "\u001B[46;5u"
+# key = "Period"
+# mods = "Control"
+#
+# [[keyboard.bindings]]
+# chars = "\u001B[46;6u"
+# key = "Period"
+# mods = "Control|Shift"
+#
+# [[keyboard.bindings]]
+# chars = "\u001B[44;5u"
+# key = "Comma"
+# mods = "Control"
+#
+# [[keyboard.bindings]]
+# chars = "\u001B[44;6u"
+# key = "Comma"
+# mods = "Control|Shift"
+#
+# [[keyboard.bindings]]
+# chars = "\u001B[59;5u"
+# key = "Semicolon"
+# mods = "Control"
+#
+# [[keyboard.bindings]]
+# chars = "\u001B[59;6u"
+# key = "Semicolon"
+# mods = "Control|Shift"
+#
+# [[keyboard.bindings]]
+# chars = "\u001B[105;6u"
+# key = "I"
+# mods = "Control|Shift"
+#
+# [[keyboard.bindings]]
+# chars = "\u001B[106;6u"
+# key = "J"
+# mods = "Control|Shift"
+#
+# [[keyboard.bindings]]
+# chars = "\u001B[107;6u"
+# key = "K"
+# mods = "Control|Shift"
+#
+# [[keyboard.bindings]]
+# chars = "\u001B[109;6u"
+# key = "M"
+# mods = "Control|Shift"
+#
+# [[keyboard.bindings]]
+# chars = "\u001B[118;6u"
+# key = "V"
+# mods = "Control|Shift"
