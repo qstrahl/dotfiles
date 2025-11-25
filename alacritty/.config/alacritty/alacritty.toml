@@ -64,6 +64,9 @@ lines = 50
 
 [keyboard]
 bindings = [
+  { key = "Tab", mods = "Control", action = "SelectNextTab" },
+  { key = "Tab", mods = "Control|Shift", action = "SelectPreviousTab" },
+  
   # kitty keyboard protocol corrections
   { key = "Escape", mods = "Shift", chars = "\u001b[27;2u"},
   { key = "Escape", mods = "Alt|Shift", chars = "\u001b[27;4u"},
