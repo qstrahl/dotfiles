@@ -5,7 +5,9 @@ export TERM="xterm"
 
 # unminimize the codespace, answer affirmatively to every prompt
 # (unminimize lacks a non-interactive flag, sad)
-yes | sudo unminimize
+if command -v unminimize; then
+  yes | sudo unminimize
+fi
 
 # ensure $USER is defined
 if [ -z "$USER" ]; then
