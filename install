@@ -174,4 +174,4 @@ sudo cp -r bin lib share /usr
 npm install -g tree-sitter-cli
 
 # do an initial run of nvim to bootstrap stuff
-nvim +qa
+# nvim +qa
