@@ -130,6 +130,18 @@ fish_add_path ~/.local/bin
 fish_add_path ~/obsidian/.venv/bin
 EOF
 
+# hack to get around the fact that gitpod doesn't like fish as a login shell
+mv ~/.bashrc ~/.bashrc.old
+cat <<EOF > ~/.bashrc
+if [[ \$- == *i* ]] && shopt -q login_shell; then
+  SHELL=\$(which fish)
+  export SHELL
+  exec -l \$SHELL
+else
+  source ~/.bashrc.old
+fi
+EOF
+
 # sudo chsh -s /usr/bin/fish "$USER"
 
 # install tmux
